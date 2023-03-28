@@ -1,0 +1,218 @@
+[gd_scene load_steps=4 format=3 uid="uid://caykbfqkvdflq"]
+
+[ext_resource type="Script" path="res://Scenes/MusicSheet/Signature.gd" id="1_jtjf1"]
+[ext_resource type="Texture2D" uid="uid://42t1b1a81l8" path="res://Assets/Figures/numsign.png" id="1_txrcj"]
+[ext_resource type="Texture2D" uid="uid://dh3b4u8s0wbsn" path="res://Assets/Figures/bemol.png" id="2_iqiem"]
+
+[node name="FSignature" type="Control"]
+custom_minimum_size = Vector2i(140, 170)
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -85.0
+offset_right = 120.0
+offset_bottom = 85.0
+grow_vertical = 2
+script = ExtResource("1_jtjf1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2i(120, 170)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+
+[node name="P1" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(20, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 20.0
+offset_bottom = 170.0
+
+[node name="num" type="TextureRect" parent="HBoxContainer/P1"]
+visible = false
+offset_left = -12.0
+offset_top = 48.0
+offset_right = 28.0
+offset_bottom = 98.0
+rotation = -0.0959931
+texture = ExtResource("1_txrcj")
+ignore_texture_size = true
+
+[node name="bemol" type="TextureRect" parent="HBoxContainer/P1"]
+visible = false
+offset_left = -12.0
+offset_top = 76.0
+offset_right = 28.0
+offset_bottom = 116.0
+rotation = -0.0959931
+texture = ExtResource("2_iqiem")
+ignore_texture_size = true
+
+[node name="P2" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(20, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_right = 40.0
+offset_bottom = 170.0
+
+[node name="num" type="TextureRect" parent="HBoxContainer/P2"]
+visible = false
+offset_left = -12.0
+offset_top = 72.0
+offset_right = 28.0
+offset_bottom = 122.0
+rotation = -0.0959931
+texture = ExtResource("1_txrcj")
+ignore_texture_size = true
+
+[node name="bemol" type="TextureRect" parent="HBoxContainer/P2"]
+visible = false
+offset_left = -12.0
+offset_top = 52.0
+offset_right = 28.0
+offset_bottom = 92.0
+rotation = -0.0959931
+texture = ExtResource("2_iqiem")
+ignore_texture_size = true
+
+[node name="P3" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(20, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 40.0
+offset_right = 60.0
+offset_bottom = 170.0
+
+[node name="num" type="TextureRect" parent="HBoxContainer/P3"]
+visible = false
+offset_left = -12.0
+offset_top = 40.0
+offset_right = 28.0
+offset_bottom = 90.0
+rotation = -0.0959931
+texture = ExtResource("1_txrcj")
+ignore_texture_size = true
+
+[node name="bemol" type="TextureRect" parent="HBoxContainer/P3"]
+visible = false
+offset_left = -12.0
+offset_top = 84.0
+offset_right = 28.0
+offset_bottom = 124.0
+rotation = -0.0959931
+texture = ExtResource("2_iqiem")
+ignore_texture_size = true
+
+[node name="P4" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(20, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 60.0
+offset_right = 80.0
+offset_bottom = 170.0
+
+[node name="num" type="TextureRect" parent="HBoxContainer/P4"]
+visible = false
+offset_left = -12.0
+offset_top = 64.0
+offset_right = 28.0
+offset_bottom = 114.0
+rotation = -0.0959931
+texture = ExtResource("1_txrcj")
+ignore_texture_size = true
+
+[node name="bemol" type="TextureRect" parent="HBoxContainer/P4"]
+visible = false
+offset_left = -12.0
+offset_top = 60.0
+offset_right = 28.0
+offset_bottom = 100.0
+rotation = -0.0959931
+texture = ExtResource("2_iqiem")
+ignore_texture_size = true
+
+[node name="P5" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(20, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_right = 100.0
+offset_bottom = 170.0
+
+[node name="num" type="TextureRect" parent="HBoxContainer/P5"]
+visible = false
+offset_left = -12.0
+offset_top = 88.0
+offset_right = 28.0
+offset_bottom = 138.0
+rotation = -0.0959931
+texture = ExtResource("1_txrcj")
+ignore_texture_size = true
+
+[node name="bemol" type="TextureRect" parent="HBoxContainer/P5"]
+visible = false
+offset_left = -12.0
+offset_top = 92.0
+offset_right = 28.0
+offset_bottom = 132.0
+rotation = -0.0959931
+texture = ExtResource("2_iqiem")
+ignore_texture_size = true
+
+[node name="P6" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(20, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 100.0
+offset_right = 120.0
+offset_bottom = 170.0
+
+[node name="num" type="TextureRect" parent="HBoxContainer/P6"]
+visible = false
+offset_left = -12.0
+offset_top = 56.0
+offset_right = 28.0
+offset_bottom = 106.0
+rotation = -0.0959931
+texture = ExtResource("1_txrcj")
+ignore_texture_size = true
+
+[node name="bemol" type="TextureRect" parent="HBoxContainer/P6"]
+visible = false
+offset_left = -12.0
+offset_top = 68.0
+offset_right = 28.0
+offset_bottom = 108.0
+rotation = -0.0959931
+texture = ExtResource("2_iqiem")
+ignore_texture_size = true
+
+[node name="P7" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(20, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 120.0
+offset_right = 140.0
+offset_bottom = 170.0
+
+[node name="num" type="TextureRect" parent="HBoxContainer/P7"]
+visible = false
+offset_left = -12.0
+offset_top = 80.0
+offset_right = 28.0
+offset_bottom = 130.0
+rotation = -0.0959931
+texture = ExtResource("1_txrcj")
+ignore_texture_size = true
+
+[node name="bemol" type="TextureRect" parent="HBoxContainer/P7"]
+visible = false
+offset_left = -12.0
+offset_top = 100.0
+offset_right = 28.0
+offset_bottom = 140.0
+rotation = -0.0959931
+texture = ExtResource("2_iqiem")
+ignore_texture_size = true

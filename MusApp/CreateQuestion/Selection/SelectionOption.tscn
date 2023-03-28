@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://chjsn121m6wxy"]
+
+[ext_resource type="Script" path="res://CreateQuestion/Selection/SelectionOption.gd" id="1_wegpm"]
+[ext_resource type="StyleBox" uid="uid://cxt3p1cqhcx1g" path="res://Assets/ButtonColor/RedButtonNormal.tres" id="2_i8hrv"]
+[ext_resource type="StyleBox" uid="uid://b5l8bij5x63n3" path="res://Assets/ButtonColor/BlueButtonNormal.tres" id="2_ux8yv"]
+[ext_resource type="StyleBox" uid="uid://b1vp12avcsa6q" path="res://Assets/ButtonColor/RedButtonHover.tres" id="3_0mejl"]
+[ext_resource type="StyleBox" uid="uid://bw8ypx0hhphn8" path="res://Assets/ButtonColor/GreenColorFocus.tres" id="4_nweog"]
+[ext_resource type="Texture2D" uid="uid://cp10qyeg3hy26" path="res://Assets/iconos/borrar2.png" id="5_4bs5n"]
+
+[node name="SelectionOption" type="Control"]
+custom_minimum_size = Vector2i(1000, 40)
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -650.0
+offset_right = 431.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("1_wegpm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2i(1000, 40)
+offset_right = 1080.0
+offset_bottom = 40.0
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(110, 0)
+offset_top = 7.0
+offset_right = 110.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.54902, 0.54902, 0.54902, 1)
+text = "Opcion #:  -"
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(900, 40)
+offset_left = 120.0
+offset_right = 1020.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("2_ux8yv")
+placeholder_text = "Escriba la opción aqui . . ."
+
+[node name="Delete" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(40, 40)
+offset_left = 1030.0
+offset_right = 1070.0
+offset_bottom = 40.0
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("2_i8hrv")
+theme_override_styles/hover = ExtResource("3_0mejl")
+theme_override_styles/focus = ExtResource("4_nweog")
+text = " "
+icon = ExtResource("5_4bs5n")
+icon_alignment = 1
+
+[connection signal="pressed" from="HBoxContainer/Delete" to="." method="_on_delete_pressed"]

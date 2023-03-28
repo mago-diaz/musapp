@@ -1,0 +1,188 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1qex6ef0cgch"]
+
+[ext_resource type="Script" path="res://Home/TeacherQuiz/OpenedQuiz.gd" id="1_vj8vt"]
+[ext_resource type="StyleBox" uid="uid://b4r6ml4yts6gy" path="res://Assets/ButtonColor/GreenButtonNormal.tres" id="2_s8jwo"]
+[ext_resource type="StyleBox" uid="uid://ck1raeeejtfaw" path="res://Assets/ButtonColor/GreenButtonHover.tres" id="3_em3oy"]
+
+[node name="OpenedQuiz" type="CenterContainer"]
+custom_minimum_size = Vector2i(1490, 120)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -600.0
+offset_right = 600.0
+offset_bottom = 80.0
+grow_horizontal = 2
+script = ExtResource("1_vj8vt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(1464, 80)
+offset_left = 13.0
+offset_top = 20.0
+offset_right = 1477.0
+offset_bottom = 100.0
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2i(1440, 80)
+offset_left = 13.0
+offset_top = 20.0
+offset_right = 1476.0
+offset_bottom = 100.0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(5, 80)
+offset_right = 5.0
+offset_bottom = 80.0
+color = Color(0.572549, 0.619608, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+offset_left = 9.0
+offset_right = 549.0
+offset_bottom = 80.0
+theme_override_constants/separation = 0
+
+[node name="QuizBox" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2i(500, 40)
+offset_right = 540.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Quiz" type="Label" parent="VBoxContainer/VBoxContainer/QuizBox"]
+offset_top = 7.0
+offset_right = 60.0
+offset_bottom = 33.0
+text = "Prueba:"
+
+[node name="QuizLabel" type="Label" parent="VBoxContainer/VBoxContainer/QuizBox"]
+custom_minimum_size = Vector2i(460, 0)
+offset_left = 80.0
+offset_top = 7.0
+offset_right = 540.0
+offset_bottom = 33.0
+text = "INSERTE NOMBRE"
+clip_text = true
+
+[node name="TeacherBox" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2i(500, 40)
+offset_top = 40.0
+offset_right = 540.0
+offset_bottom = 80.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Teacher" type="Label" parent="VBoxContainer/VBoxContainer/TeacherBox"]
+offset_top = 7.0
+offset_right = 90.0
+offset_bottom = 33.0
+text = "Profesor(a):"
+
+[node name="TeacherLabel" type="Label" parent="VBoxContainer/VBoxContainer/TeacherBox"]
+custom_minimum_size = Vector2i(430, 0)
+offset_left = 110.0
+offset_top = 7.0
+offset_right = 540.0
+offset_bottom = 33.0
+text = "INSERTE NOMBRE"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer"]
+offset_left = 553.0
+offset_right = 971.0
+offset_bottom = 80.0
+theme_override_constants/separation = 0
+
+[node name="ScoreBox" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2i(400, 40)
+offset_right = 418.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Score" type="Label" parent="VBoxContainer/VBoxContainer2/ScoreBox"]
+offset_top = 7.0
+offset_right = 135.0
+offset_bottom = 33.0
+text = "Puntaje Máximo: "
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer/VBoxContainer2/ScoreBox"]
+custom_minimum_size = Vector2i(263, 0)
+offset_left = 155.0
+offset_top = 7.0
+offset_right = 418.0
+offset_bottom = 33.0
+text = "INGRESAR PUNTAJE"
+
+[node name="EndDateBox" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2i(360, 40)
+offset_top = 40.0
+offset_right = 417.0
+offset_bottom = 80.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="EndDate" type="Label" parent="VBoxContainer/VBoxContainer2/EndDateBox"]
+offset_top = 7.0
+offset_right = 137.0
+offset_bottom = 33.0
+text = "Fecha de Entrega:"
+
+[node name="EndDateLabel" type="Label" parent="VBoxContainer/VBoxContainer2/EndDateBox"]
+custom_minimum_size = Vector2i(260, 0)
+offset_left = 157.0
+offset_top = 7.0
+offset_right = 417.0
+offset_bottom = 33.0
+text = "INSERTE FECHA DE ENTREGA"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(242, 0)
+offset_left = 975.0
+offset_right = 1217.0
+offset_bottom = 80.0
+theme_override_constants/separation = 0
+
+[node name="TimeBox" type="HBoxContainer" parent="VBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2i(200, 40)
+offset_left = 7.0
+offset_right = 234.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Time" type="Label" parent="VBoxContainer/VBoxContainer3/TimeBox"]
+offset_top = 7.0
+offset_right = 79.0
+offset_bottom = 33.0
+text = "Duración: "
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer/VBoxContainer3/TimeBox"]
+custom_minimum_size = Vector2i(100, 0)
+offset_left = 99.0
+offset_top = 7.0
+offset_right = 227.0
+offset_bottom = 33.0
+text = "INGRESAR HORA"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(242, 70)
+offset_left = 1221.0
+offset_right = 1463.0
+offset_bottom = 80.0
+
+[node name="EndedQuiz" type="Button" parent="VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2i(200, 40)
+offset_left = 21.0
+offset_top = 20.0
+offset_right = 221.0
+offset_bottom = 60.0
+theme_override_styles/normal = ExtResource("2_s8jwo")
+theme_override_styles/hover = ExtResource("3_em3oy")
+text = "Finalizar Evaluacion"
+
+[connection signal="pressed" from="VBoxContainer/CenterContainer/EndedQuiz" to="." method="_on_ended_quiz_pressed"]

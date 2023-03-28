@@ -1,0 +1,5 @@
+[gd_resource type="SystemFont" format=3 uid="uid://cl0mpew4o3s67"]
+
+[resource]
+font_names = PackedStringArray("Lucida Sans")
+hinting = 2

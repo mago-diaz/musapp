@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cksum0yvbo6a3"]
+
+[ext_resource type="PackedScene" uid="uid://b65scaeb0wqtf" path="res://Scenes/PianoManager.tscn" id="1_jq0fy"]
+[ext_resource type="Script" path="res://TypeOfQuestion/Piano/PianoQuestion.gd" id="1_lfchk"]
+
+[node name="Piano" type="Control"]
+custom_minimum_size = Vector2i(1400, 620)
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -700.0
+offset_right = 700.0
+offset_bottom = 620.0
+grow_horizontal = 2
+script = ExtResource("1_lfchk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2i(1400, 620)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.713726, 0.713726, 0.713726, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2i(1400, 620)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PianoManager" parent="CenterContainer" instance=ExtResource("1_jq0fy")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 80.0
+offset_right = 1460.0
+offset_bottom = 540.0
+grow_horizontal = 1
+grow_vertical = 1

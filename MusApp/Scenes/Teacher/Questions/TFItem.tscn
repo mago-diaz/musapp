@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://824ygrkpsxdo"]
+
+[ext_resource type="Theme" uid="uid://pxrnkdb26ege" path="res://Assets/ButtonColor/Default.tres" id="1_0nc6y"]
+[ext_resource type="StyleBox" uid="uid://xjofrcgr0200" path="res://Assets/ButtonColor/DeleteButtonColor.tres" id="1_i5bhl"]
+[ext_resource type="StyleBox" uid="uid://b4lp32rpvw77h" path="res://Assets/ButtonColor/DeleteButtonPressedColor.tres" id="2_e77hm"]
+
+[node name="TFItem" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -420.0
+offset_bottom = -1040.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2i(1500, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 50
+
+[node name="Num" type="Label" parent="HBoxContainer"]
+offset_top = 1.0
+offset_right = 29.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "1)."
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(800, 0)
+offset_left = 79.0
+offset_right = 879.0
+offset_bottom = 40.0
+theme = ExtResource("1_0nc6y")
+theme_override_font_sizes/font_size = 0
+placeholder_text = "Escriba la sentencia aqui"
+scroll_past_end_of_file = true
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(215, 40)
+offset_left = 929.0
+offset_right = 1144.0
+offset_bottom = 40.0
+theme = ExtResource("1_0nc6y")
+theme_override_font_sizes/font_size = 20
+alignment = 1
+icon_alignment = 1
+item_count = 3
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "Seleccione opción"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Verdadero"
+popup/item_1/id = 1
+popup/item_2/text = "Falso"
+popup/item_2/id = 2
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+offset_left = 1194.0
+offset_right = 1500.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 0
+theme_override_styles/normal = ExtResource("1_i5bhl")
+theme_override_styles/hover = ExtResource("1_i5bhl")
+theme_override_styles/pressed = ExtResource("2_e77hm")
+text = "Eliminar"
+icon_alignment = 1

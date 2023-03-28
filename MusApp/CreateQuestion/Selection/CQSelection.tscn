@@ -1,0 +1,279 @@
+[gd_scene load_steps=12 format=3 uid="uid://cje5lb3owwitc"]
+
+[ext_resource type="Script" path="res://CreateQuestion/Selection/CQSelection.gd" id="1_2c21c"]
+[ext_resource type="PackedScene" uid="uid://chjsn121m6wxy" path="res://CreateQuestion/Selection/SelectionOption.tscn" id="1_g8ebx"]
+[ext_resource type="Script" path="res://CreateQuestion/Selection/Options.gd" id="2_2ujsd"]
+[ext_resource type="StyleBox" uid="uid://cxt3p1cqhcx1g" path="res://Assets/ButtonColor/RedButtonNormal.tres" id="2_jd0p6"]
+[ext_resource type="StyleBox" uid="uid://b1vp12avcsa6q" path="res://Assets/ButtonColor/RedButtonHover.tres" id="3_2me0o"]
+[ext_resource type="StyleBox" uid="uid://bw8ypx0hhphn8" path="res://Assets/ButtonColor/GreenColorFocus.tres" id="4_3kv75"]
+[ext_resource type="Texture2D" uid="uid://cp10qyeg3hy26" path="res://Assets/iconos/borrar2.png" id="5_4ncmm"]
+[ext_resource type="StyleBox" uid="uid://b5l8bij5x63n3" path="res://Assets/ButtonColor/BlueButtonNormal.tres" id="6_5cf6d"]
+[ext_resource type="StyleBox" uid="uid://bt60dr6ro1cwu" path="res://Assets/ButtonColor/BlueButtonHover.tres" id="7_432ia"]
+[ext_resource type="StyleBox" uid="uid://b4r6ml4yts6gy" path="res://Assets/ButtonColor/GreenButtonNormal.tres" id="9_8mph0"]
+[ext_resource type="StyleBox" uid="uid://ck1raeeejtfaw" path="res://Assets/ButtonColor/GreenButtonHover.tres" id="10_8idfi"]
+
+[node name="CQSelection" type="CenterContainer"]
+custom_minimum_size = Vector2i(1500, 620)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -650.0
+offset_right = 650.0
+offset_bottom = 367.0
+grow_horizontal = 2
+script = ExtResource("1_2c21c")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(1400, 600)
+layout_mode = 2
+offset_left = 50.0
+offset_top = 10.0
+offset_right = 1450.0
+offset_bottom = 610.0
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 60.0
+offset_top = 25.0
+offset_right = 1440.0
+offset_bottom = 595.0
+
+[node name="Title" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1380, 0)
+layout_mode = 2
+offset_right = 1380.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer/Title"]
+custom_minimum_size = Vector2i(983, 0)
+layout_mode = 2
+offset_top = 7.0
+offset_right = 983.0
+offset_bottom = 33.0
+text = "Pregunta #:  --"
+
+[node name="Control" type="Control" parent="VBoxContainer/Title"]
+custom_minimum_size = Vector2i(270, 40)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 1003.0
+offset_right = 1273.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Title/Control"]
+custom_minimum_size = Vector2i(270, 40)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0.627451, 0.45098, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Title/Control"]
+custom_minimum_size = Vector2i(270, 40)
+layout_mode = 0
+offset_right = 270.0
+offset_bottom = 32.0
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/Title/Control/HBoxContainer"]
+custom_minimum_size = Vector2i(160, 0)
+layout_mode = 2
+offset_top = 7.0
+offset_right = 160.0
+offset_bottom = 33.0
+text = "Puntaje Pregunta"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Title/Control/HBoxContainer"]
+custom_minimum_size = Vector2i(20, 0)
+layout_mode = 2
+offset_left = 178.0
+offset_top = 4.0
+offset_right = 261.063
+offset_bottom = 35.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+rounded = true
+update_on_text_changed = true
+
+[node name="Delete" type="Button" parent="VBoxContainer/Title"]
+custom_minimum_size = Vector2i(80, 32)
+layout_mode = 2
+offset_left = 1293.0
+offset_right = 1373.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("2_jd0p6")
+theme_override_styles/hover = ExtResource("3_2me0o")
+theme_override_styles/focus = ExtResource("4_3kv75")
+icon = ExtResource("5_4ncmm")
+icon_alignment = 1
+
+[node name="QuestionBox" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1380, 80)
+layout_mode = 2
+offset_top = 44.0
+offset_right = 1380.0
+offset_bottom = 134.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/QuestionBox"]
+custom_minimum_size = Vector2i(1180, 90)
+layout_mode = 2
+offset_left = 100.0
+offset_right = 1280.0
+offset_bottom = 90.0
+theme_override_styles/normal = ExtResource("6_5cf6d")
+placeholder_text = "Escribe aqui la pregunta ..."
+wrap_mode = 1
+minimap_width = 200
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+offset_top = 210.0
+offset_right = 1380.0
+offset_bottom = 237.0
+
+[node name="ShowOptions" type="Button" parent="VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2i(1180, 0)
+layout_mode = 2
+offset_left = 100.0
+offset_right = 1280.0
+offset_bottom = 27.0
+theme_override_styles/normal = ExtResource("6_5cf6d")
+theme_override_styles/hover = ExtResource("7_432ia")
+text = "Ocultar Opciones (las opciones no serán eliminadas, solo dejarán de ser visibles)"
+
+[node name="Answer" type="VBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(0, 40)
+layout_mode = 2
+offset_left = 150.0
+offset_top = 138.0
+offset_right = 1230.0
+offset_bottom = 526.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="TrueOptionsMenu" type="VBoxContainer" parent="VBoxContainer/Answer"]
+layout_mode = 2
+offset_right = 1080.0
+offset_bottom = 70.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Answer/TrueOptionsMenu"]
+layout_mode = 2
+offset_right = 1080.0
+offset_bottom = 26.0
+text = "Opción correcta"
+
+[node name="TrueOptions" type="VBoxContainer" parent="VBoxContainer/Answer/TrueOptionsMenu"]
+layout_mode = 2
+offset_top = 30.0
+offset_right = 1080.0
+offset_bottom = 70.0
+script = ExtResource("2_2ujsd")
+
+[node name="SelectionOption" parent="VBoxContainer/Answer/TrueOptionsMenu/TrueOptions" instance=ExtResource("1_g8ebx")]
+layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_right = 1080.0
+grow_horizontal = 1
+
+[node name="FalseOptionMenu" type="VBoxContainer" parent="VBoxContainer/Answer"]
+custom_minimum_size = Vector2i(1000, 0)
+layout_mode = 2
+offset_top = 90.0
+offset_right = 1080.0
+offset_bottom = 388.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Answer/FalseOptionMenu"]
+layout_mode = 2
+offset_right = 1080.0
+offset_bottom = 26.0
+text = "Opciones incorrectas"
+
+[node name="Control" type="Control" parent="VBoxContainer/Answer/FalseOptionMenu"]
+custom_minimum_size = Vector2i(0, 32)
+layout_mode = 2
+anchors_preset = 0
+offset_top = 30.0
+offset_right = 1080.0
+offset_bottom = 62.0
+
+[node name="FalseOptionButton" type="Button" parent="VBoxContainer/Answer/FalseOptionMenu/Control"]
+custom_minimum_size = Vector2i(740, 32)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -370.0
+offset_top = -32.0
+offset_right = 370.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("9_8mph0")
+theme_override_styles/hover = ExtResource("10_8idfi")
+theme_override_styles/focus = ExtResource("4_3kv75")
+text = "Agregar Opción Incorrecta"
+
+[node name="FalseOptions" type="VBoxContainer" parent="VBoxContainer/Answer/FalseOptionMenu"]
+custom_minimum_size = Vector2i(1080, 232)
+layout_mode = 2
+offset_top = 66.0
+offset_right = 1080.0
+offset_bottom = 298.0
+theme_override_constants/separation = 20
+script = ExtResource("2_2ujsd")
+
+[node name="InfoBox" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1200, 40)
+layout_mode = 2
+offset_left = 17.0
+offset_top = 530.0
+offset_right = 1362.0
+offset_bottom = 570.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 45
+
+[node name="OptionNum" type="Label" parent="VBoxContainer/InfoBox"]
+custom_minimum_size = Vector2i(900, 0)
+layout_mode = 2
+offset_top = 7.0
+offset_right = 900.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.54902, 0.54902, 0.54902, 1)
+text = "Cantidad de opciones : 0"
+vertical_alignment = 1
+
+[node name="MaxNumOption" type="Label" parent="VBoxContainer/InfoBox"]
+custom_minimum_size = Vector2i(400, 0)
+layout_mode = 2
+offset_left = 945.0
+offset_top = 7.0
+offset_right = 1345.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.54902, 0.54902, 0.54902, 1)
+text = "Numero máximo de opciones : 0
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[connection signal="value_changed" from="VBoxContainer/Title/Control/HBoxContainer/SpinBox" to="." method="_on_spin_box_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Title/Delete" to="." method="_on_delete_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/ShowOptions" to="." method="_on_show_options_pressed"]
+[connection signal="Delete" from="VBoxContainer/Answer/TrueOptionsMenu/TrueOptions" to="." method="false_option_deleted"]
+[connection signal="pressed" from="VBoxContainer/Answer/FalseOptionMenu/Control/FalseOptionButton" to="." method="_on_false_option_button_pressed"]
+[connection signal="Delete" from="VBoxContainer/Answer/FalseOptionMenu/FalseOptions" to="." method="false_option_deleted"]

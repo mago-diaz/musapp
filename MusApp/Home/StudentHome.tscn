@@ -1,0 +1,308 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0ekpk4thpsb3"]
+
+[ext_resource type="Texture2D" uid="uid://fqeu6vphkwav" path="res://Assets/Background/background_multicolor.png" id="1_8hgii"]
+[ext_resource type="Script" path="res://Home/StudentHome.gd" id="1_oob7g"]
+[ext_resource type="StyleBox" uid="uid://cxt3p1cqhcx1g" path="res://Assets/ButtonColor/RedButtonNormal.tres" id="2_8f1vy"]
+[ext_resource type="StyleBox" uid="uid://b5l8bij5x63n3" path="res://Assets/ButtonColor/BlueButtonNormal.tres" id="2_qj411"]
+[ext_resource type="StyleBox" uid="uid://bt60dr6ro1cwu" path="res://Assets/ButtonColor/BlueButtonHover.tres" id="3_cxpkb"]
+[ext_resource type="StyleBox" uid="uid://b1vp12avcsa6q" path="res://Assets/ButtonColor/RedButtonHover.tres" id="3_lww50"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kkqa"]
+bg_color = Color(0.576471, 0.513726, 0.996078, 1)
+border_width_left = 100
+border_width_right = 100
+border_color = Color(0.576471, 0.513726, 0.996078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jdf7g"]
+bg_color = Color(0.117647, 0.117647, 0.117647, 1)
+border_width_left = 100
+border_width_right = 100
+border_color = Color(0.117647, 0.117647, 0.117647, 1)
+
+[node name="StudentHome" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oob7g")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_8hgii")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(1600, 1080)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -540.0
+offset_right = 800.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.223529, 0.607843, 0.611765, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(1600, 1000)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -1000.0
+offset_right = 800.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2i(1600, 1080)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -540.0
+offset_right = 800.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2i(1600, 60)
+offset_right = 1600.0
+offset_bottom = 80.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 560
+
+[node name="Musapp" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(240, 80)
+offset_right = 240.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 40
+text = "MUSAPP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer"]
+offset_left = 800.0
+offset_right = 1564.0
+offset_bottom = 80.0
+theme_override_constants/separation = 24
+
+[node name="StudentLabel" type="Label" parent="VBoxContainer/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(540, 0)
+offset_top = 27.0
+offset_right = 540.0
+offset_bottom = 53.0
+text = "INSERTE NOMBRE COMPLETO DEL ALUMNO "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Logout" type="Button" parent="VBoxContainer/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(200, 40)
+offset_left = 564.0
+offset_top = 20.0
+offset_right = 764.0
+offset_bottom = 60.0
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("2_8f1vy")
+theme_override_styles/hover = ExtResource("3_lww50")
+text = "Cerrar Sesion"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(0, 80)
+offset_top = 84.0
+offset_right = 1600.0
+offset_bottom = 164.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer"]
+offset_left = 59.0
+offset_top = 20.0
+offset_right = 1540.0
+offset_bottom = 60.0
+theme_override_constants/separation = 600
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(400, 0)
+offset_top = 5.0
+offset_right = 521.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 18
+text = "Selecciona una asignatura para ver tus evaluaciones y notas"
+
+[node name="SubjectOptions" type="OptionButton" parent="VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(360, 40)
+offset_left = 1121.0
+offset_right = 1481.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("2_qj411")
+theme_override_styles/hover = ExtResource("3_cxpkb")
+alignment = 1
+item_count = 1
+selected = 0
+popup/item_0/text = "Selecciona Asignatura"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1600, 910)
+offset_top = 168.0
+offset_right = 1600.0
+offset_bottom = 1078.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_0kkqa")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_jdf7g")
+
+[node name="Mis Evaluaciones" type="TabBar" parent="VBoxContainer/TabContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_count = 1
+tab_0/title = ""
+
+[node name="Quizzes" type="Control" parent="VBoxContainer/TabContainer/Mis Evaluaciones"]
+custom_minimum_size = Vector2i(1500, 780)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = -390.0
+offset_right = 750.0
+offset_bottom = 390.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Mis Evaluaciones/Quizzes"]
+custom_minimum_size = Vector2i(1500, 780)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/TabContainer/Mis Evaluaciones/Quizzes/VBoxContainer"]
+custom_minimum_size = Vector2i(0, 60)
+offset_right = 1500.0
+offset_bottom = 60.0
+
+[node name="ListQuizLabel" type="Label" parent="VBoxContainer/TabContainer/Mis Evaluaciones/Quizzes/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2i(1500, 0)
+offset_top = 15.0
+offset_right = 1500.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 18
+text = "Lista de evaluaciones abiertas y listas para responder de la asignatura de : "
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/TabContainer/Mis Evaluaciones/Quizzes/VBoxContainer"]
+custom_minimum_size = Vector2i(1500, 680)
+offset_top = 64.0
+offset_right = 1500.0
+offset_bottom = 744.0
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/TabContainer/Mis Evaluaciones/Quizzes/VBoxContainer/ColorRect"]
+custom_minimum_size = Vector2i(1498, 680)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="OpenedQuizList" type="VBoxContainer" parent="VBoxContainer/TabContainer/Mis Evaluaciones/Quizzes/VBoxContainer/ColorRect/ScrollContainer"]
+custom_minimum_size = Vector2i(1490, 680)
+offset_right = 1490.0
+offset_bottom = 680.0
+theme_override_constants/separation = 40
+
+[node name="Mis Notas" type="TabBar" parent="VBoxContainer/TabContainer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_count = 1
+tab_0/title = ""
+
+[node name="AnsweredQuizzes" type="Control" parent="VBoxContainer/TabContainer/Mis Notas"]
+custom_minimum_size = Vector2i(1500, 780)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = -390.0
+offset_right = 750.0
+offset_bottom = 390.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Mis Notas/AnsweredQuizzes"]
+custom_minimum_size = Vector2i(1500, 780)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/TabContainer/Mis Notas/AnsweredQuizzes/VBoxContainer"]
+custom_minimum_size = Vector2i(0, 60)
+offset_right = 1500.0
+offset_bottom = 60.0
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/Mis Notas/AnsweredQuizzes/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2i(1500, 0)
+offset_top = 17.0
+offset_right = 1500.0
+offset_bottom = 43.0
+text = "Lista de evaluaciones respondidas"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/TabContainer/Mis Notas/AnsweredQuizzes/VBoxContainer"]
+offset_top = 64.0
+offset_right = 1500.0
+offset_bottom = 68.0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/TabContainer/Mis Notas/AnsweredQuizzes/VBoxContainer"]
+custom_minimum_size = Vector2i(1500, 680)
+offset_top = 64.0
+offset_right = 1500.0
+offset_bottom = 744.0
+color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/TabContainer/Mis Notas/AnsweredQuizzes/VBoxContainer/ColorRect"]
+custom_minimum_size = Vector2i(1498, 680)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="AnsweredQuizList" type="VBoxContainer" parent="VBoxContainer/TabContainer/Mis Notas/AnsweredQuizzes/VBoxContainer/ColorRect/ScrollContainer"]
+custom_minimum_size = Vector2i(1490, 680)
+offset_right = 1490.0
+offset_bottom = 680.0
+theme_override_constants/separation = 40
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/HBoxContainer/Logout" to="." method="_on_logout_pressed"]
+[connection signal="item_selected" from="VBoxContainer/CenterContainer/HBoxContainer/SubjectOptions" to="." method="_on_subject_options_item_selected"]

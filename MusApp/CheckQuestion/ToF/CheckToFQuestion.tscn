@@ -1,0 +1,140 @@
+[gd_scene load_steps=3 format=3 uid="uid://t6sdu25tjajv"]
+
+[ext_resource type="Script" path="res://CheckQuestion/ToF/CheckToFQuestion.gd" id="1_nd063"]
+[ext_resource type="StyleBox" uid="uid://b5l8bij5x63n3" path="res://Assets/ButtonColor/BlueButtonNormal.tres" id="5_7svjn"]
+
+[node name="CheckToFQuestion" type="CenterContainer"]
+custom_minimum_size = Vector2i(1500, 240)
+offset_right = 1500.0
+offset_bottom = 240.0
+script = ExtResource("1_nd063")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(1400, 220)
+offset_left = 50.0
+offset_top = 10.0
+offset_right = 1450.0
+offset_bottom = 230.0
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 60.0
+offset_top = 23.0
+offset_right = 1440.0
+offset_bottom = 217.0
+
+[node name="Title" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1380, 0)
+offset_right = 1380.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer/Title"]
+custom_minimum_size = Vector2i(700, 0)
+offset_top = 7.0
+offset_right = 700.0
+offset_bottom = 33.0
+text = "Pregunta #: --"
+
+[node name="Control" type="Control" parent="VBoxContainer/Title"]
+custom_minimum_size = Vector2i(560, 40)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 720.0
+offset_right = 1280.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Title/Control"]
+custom_minimum_size = Vector2i(560, 40)
+offset_left = -10.0
+offset_right = 560.0
+offset_bottom = 40.0
+color = Color(0, 0.627451, 0.45098, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Title/Control"]
+custom_minimum_size = Vector2i(270, 40)
+offset_right = 270.0
+offset_bottom = 32.0
+theme_override_constants/separation = 10
+
+[node name="MaxScoreLabel" type="Label" parent="VBoxContainer/Title/Control/HBoxContainer"]
+offset_top = 7.0
+offset_right = 288.0
+offset_bottom = 33.0
+text = "Puntaje máximo de la pregunta: 1000"
+
+[node name="Score" type="Label" parent="VBoxContainer/Title/Control/HBoxContainer"]
+custom_minimum_size = Vector2i(160, 0)
+offset_left = 298.0
+offset_top = 7.0
+offset_right = 458.0
+offset_bottom = 33.0
+text = "Puntaje Obtenido"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpinScore" type="SpinBox" parent="VBoxContainer/Title/Control/HBoxContainer"]
+custom_minimum_size = Vector2i(20, 0)
+offset_left = 467.0
+offset_top = 4.0
+offset_right = 550.063
+offset_bottom = 35.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+rounded = true
+update_on_text_changed = true
+
+[node name="QuestionBox" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1380, 120)
+offset_top = 44.0
+offset_right = 1380.0
+offset_bottom = 164.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="QuestionLabel" type="TextEdit" parent="VBoxContainer/QuestionBox"]
+custom_minimum_size = Vector2i(1168, 90)
+offset_left = 106.0
+offset_top = 15.0
+offset_right = 1274.0
+offset_bottom = 105.0
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("5_7svjn")
+editable = false
+
+[node name="Answer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1175, 0)
+offset_left = 102.0
+offset_top = 168.0
+offset_right = 1277.0
+offset_bottom = 194.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/Answer"]
+offset_right = 332.0
+offset_bottom = 26.0
+text = "La respuesta entregada por el alumno fue: "
+
+[node name="StudentAnswer" type="Label" parent="VBoxContainer/Answer"]
+custom_minimum_size = Vector2i(120, 0)
+offset_left = 336.0
+offset_right = 456.0
+offset_bottom = 26.0
+text = "No respondió"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Answer"]
+offset_left = 460.0
+offset_right = 607.0
+offset_bottom = 26.0
+text = "Esta Respuesta es: "
+
+[node name="Result" type="Label" parent="VBoxContainer/Answer"]
+offset_left = 611.0
+offset_top = 1.0
+offset_right = 612.0
+offset_bottom = 24.0
+
+[connection signal="value_changed" from="VBoxContainer/Title/Control/HBoxContainer/SpinScore" to="." method="_on_spin_score_value_changed"]

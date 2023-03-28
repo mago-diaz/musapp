@@ -1,0 +1,179 @@
+[gd_scene load_steps=6 format=3 uid="uid://br8fb1vo4vetw"]
+
+[ext_resource type="Script" path="res://Home/TeacherQuiz/CheckAnsweredQuiz.gd" id="1_0oph4"]
+[ext_resource type="StyleBox" uid="uid://b4r6ml4yts6gy" path="res://Assets/ButtonColor/GreenButtonNormal.tres" id="1_6deg5"]
+[ext_resource type="StyleBox" uid="uid://ck1raeeejtfaw" path="res://Assets/ButtonColor/GreenButtonHover.tres" id="2_m2bor"]
+[ext_resource type="StyleBox" uid="uid://cxt3p1cqhcx1g" path="res://Assets/ButtonColor/RedButtonNormal.tres" id="3_ukrfh"]
+[ext_resource type="StyleBox" uid="uid://b1vp12avcsa6q" path="res://Assets/ButtonColor/RedButtonHover.tres" id="4_snjsr"]
+
+[node name="CheckAnsweredQuiz" type="CenterContainer"]
+custom_minimum_size = Vector2i(0, 120)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -730.0
+offset_right = 730.0
+offset_bottom = 120.0
+grow_horizontal = 2
+script = ExtResource("1_0oph4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(1460, 80)
+offset_top = 20.0
+offset_right = 1460.0
+offset_bottom = 100.0
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2i(1460, 20)
+offset_top = 18.0
+offset_right = 1460.0
+offset_bottom = 102.0
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(5, 60)
+offset_right = 5.0
+offset_bottom = 84.0
+color = Color(0.572549, 0.619608, 1, 1)
+
+[node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(1000, 0)
+offset_left = 9.0
+offset_right = 1129.0
+offset_bottom = 84.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/CenterContainer2"]
+custom_minimum_size = Vector2i(1120, 0)
+offset_right = 1120.0
+offset_bottom = 84.0
+
+[node name="StudentBox" type="HBoxContainer" parent="HBoxContainer/CenterContainer2/VBoxContainer"]
+custom_minimum_size = Vector2i(1100, 40)
+offset_left = 10.0
+offset_right = 1110.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Student" type="Label" parent="HBoxContainer/CenterContainer2/VBoxContainer/StudentBox"]
+offset_top = 7.0
+offset_right = 87.0
+offset_bottom = 33.0
+text = "Estudiante:"
+
+[node name="StudentLabel" type="Label" parent="HBoxContainer/CenterContainer2/VBoxContainer/StudentBox"]
+custom_minimum_size = Vector2i(480, 0)
+offset_left = 107.0
+offset_top = 7.0
+offset_right = 587.0
+offset_bottom = 33.0
+text = "INSERTE NOMBRE"
+clip_text = true
+
+[node name="Grade" type="Label" parent="HBoxContainer/CenterContainer2/VBoxContainer/StudentBox"]
+offset_left = 607.0
+offset_top = 7.0
+offset_right = 661.0
+offset_bottom = 33.0
+text = "Curso: "
+
+[node name="LevelAndGrade" type="Label" parent="HBoxContainer/CenterContainer2/VBoxContainer/StudentBox"]
+custom_minimum_size = Vector2i(220, 0)
+offset_left = 681.0
+offset_top = 7.0
+offset_right = 901.0
+offset_bottom = 33.0
+text = "INSERTE CURSO"
+clip_text = true
+
+[node name="QuizGrade" type="Label" parent="HBoxContainer/CenterContainer2/VBoxContainer/StudentBox"]
+offset_left = 921.0
+offset_top = 7.0
+offset_right = 964.0
+offset_bottom = 33.0
+text = "Nota:"
+
+[node name="QuizGradeLabel" type="Label" parent="HBoxContainer/CenterContainer2/VBoxContainer/StudentBox"]
+custom_minimum_size = Vector2i(100, 0)
+offset_left = 984.0
+offset_top = 7.0
+offset_right = 1084.0
+offset_bottom = 33.0
+text = "Sin Nota"
+clip_text = true
+
+[node name="TestBox" type="HBoxContainer" parent="HBoxContainer/CenterContainer2/VBoxContainer"]
+custom_minimum_size = Vector2i(1100, 40)
+offset_left = 10.0
+offset_top = 44.0
+offset_right = 1110.0
+offset_bottom = 84.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Score" type="Label" parent="HBoxContainer/CenterContainer2/VBoxContainer/TestBox"]
+offset_top = 7.0
+offset_right = 141.0
+offset_bottom = 33.0
+text = "Puntaje Obtenido:"
+
+[node name="ScoreLabel" type="Label" parent="HBoxContainer/CenterContainer2/VBoxContainer/TestBox"]
+custom_minimum_size = Vector2i(340, 0)
+offset_left = 161.0
+offset_top = 7.0
+offset_right = 501.0
+offset_bottom = 33.0
+text = "INSERTE PUNTAJE"
+clip_text = true
+
+[node name="TimeSpend" type="Label" parent="HBoxContainer/CenterContainer2/VBoxContainer/TestBox"]
+offset_left = 521.0
+offset_top = 7.0
+offset_right = 658.0
+offset_bottom = 33.0
+text = "Tiempo Invertido:"
+
+[node name="TimeSpendLabel" type="Label" parent="HBoxContainer/CenterContainer2/VBoxContainer/TestBox"]
+custom_minimum_size = Vector2i(400, 0)
+offset_left = 678.0
+offset_top = 7.0
+offset_right = 1078.0
+offset_bottom = 33.0
+text = "INSERTE MINUTOS"
+clip_text = true
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(300, 60)
+offset_left = 1133.0
+offset_right = 1433.0
+offset_bottom = 84.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/CenterContainer"]
+offset_left = 20.0
+offset_top = 22.0
+offset_right = 280.0
+offset_bottom = 62.0
+theme_override_constants/separation = 30
+
+[node name="EditStudent" type="Button" parent="HBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(260, 40)
+offset_right = 260.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("1_6deg5")
+theme_override_styles/hover = ExtResource("2_m2bor")
+text = "Revisar Respuestas"
+
+[node name="GiveMinScore" type="Button" parent="HBoxContainer/CenterContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2i(260, 40)
+offset_left = 290.0
+offset_right = 550.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("3_ukrfh")
+theme_override_styles/hover = ExtResource("4_snjsr")
+text = "Evaluar con Nota Mínima"
+
+[connection signal="pressed" from="HBoxContainer/CenterContainer/HBoxContainer/EditStudent" to="." method="_on_edit_student_pressed"]
+[connection signal="pressed" from="HBoxContainer/CenterContainer/HBoxContainer/GiveMinScore" to="." method="_on_give_min_score_pressed"]

@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://4w38uyrrml7r"]
+
+[ext_resource type="Script" path="res://Scenes/Piano/KeyManager.gd" id="1_5hb57"]
+[ext_resource type="Script" path="res://Scenes/Piano/Key.gd" id="2_8idea"]
+
+[node name="WhiteKey" type="Control"]
+custom_minimum_size = Vector2i(80, 400)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 200.0
+script = ExtResource("1_5hb57")
+
+[node name="Key" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(80, 400)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_8idea")
+
+[node name="Word" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Note" type="Label" parent="."]
+custom_minimum_size = Vector2i(80, 0)
+layout_mode = 0
+offset_top = 400.0
+offset_right = 80.0
+offset_bottom = 426.0
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1

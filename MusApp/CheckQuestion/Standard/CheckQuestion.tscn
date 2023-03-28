@@ -1,0 +1,837 @@
+[gd_scene load_steps=94 format=3 uid="uid://bolt3un46othu"]
+
+[ext_resource type="Script" path="res://CheckQuestion/Standard/CheckQuestion.gd" id="1_21k6v"]
+[ext_resource type="StyleBox" uid="uid://b5l8bij5x63n3" path="res://Assets/ButtonColor/BlueButtonNormal.tres" id="1_xl1dj"]
+[ext_resource type="StyleBox" uid="uid://bt60dr6ro1cwu" path="res://Assets/ButtonColor/BlueButtonHover.tres" id="2_fbbpv"]
+[ext_resource type="StyleBox" uid="uid://b4r6ml4yts6gy" path="res://Assets/ButtonColor/GreenButtonNormal.tres" id="3_27biw"]
+[ext_resource type="StyleBox" uid="uid://ck1raeeejtfaw" path="res://Assets/ButtonColor/GreenButtonHover.tres" id="4_srkv8"]
+[ext_resource type="StyleBox" uid="uid://cxt3p1cqhcx1g" path="res://Assets/ButtonColor/RedButtonNormal.tres" id="5_vf6jj"]
+[ext_resource type="StyleBox" uid="uid://b1vp12avcsa6q" path="res://Assets/ButtonColor/RedButtonHover.tres" id="6_vu3pt"]
+[ext_resource type="StyleBox" uid="uid://bw8ypx0hhphn8" path="res://Assets/ButtonColor/GreenColorFocus.tres" id="7_yoxoc"]
+[ext_resource type="Texture2D" uid="uid://b75b3p3lqd04c" path="res://Assets/Loading/loading.png" id="8_1elts"]
+[ext_resource type="PackedScene" uid="uid://dxkpyqtrt72yp" path="res://Home/NoInternetConnection/NoInternetConnection.tscn" id="9_eg44p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dpya"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.909804, 0.937255, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gf1iu"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.909804, 0.937255, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhqr2"]
+atlas = ExtResource("8_1elts")
+region = Rect2(0, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a55f0"]
+atlas = ExtResource("8_1elts")
+region = Rect2(480, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xctrn"]
+atlas = ExtResource("8_1elts")
+region = Rect2(960, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtxk5"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1440, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0v0y"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1920, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtmku"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2400, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntwl1"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2880, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ut4b1"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3360, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7djd"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3840, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2j8c"]
+atlas = ExtResource("8_1elts")
+region = Rect2(4320, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etw58"]
+atlas = ExtResource("8_1elts")
+region = Rect2(0, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_048p6"]
+atlas = ExtResource("8_1elts")
+region = Rect2(480, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trw5e"]
+atlas = ExtResource("8_1elts")
+region = Rect2(960, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63vr7"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1440, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbkvj"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1920, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7b5e"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2400, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngnyd"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2880, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwith"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3360, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dojxo"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3840, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lq2u"]
+atlas = ExtResource("8_1elts")
+region = Rect2(4320, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23q88"]
+atlas = ExtResource("8_1elts")
+region = Rect2(0, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yii52"]
+atlas = ExtResource("8_1elts")
+region = Rect2(480, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egxnm"]
+atlas = ExtResource("8_1elts")
+region = Rect2(960, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbneh"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1440, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24sna"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1920, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg2y6"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2400, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3ccc"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2880, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1j3n"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3360, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtfcs"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3840, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyjmj"]
+atlas = ExtResource("8_1elts")
+region = Rect2(4320, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqmgm"]
+atlas = ExtResource("8_1elts")
+region = Rect2(0, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhbb1"]
+atlas = ExtResource("8_1elts")
+region = Rect2(480, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiuik"]
+atlas = ExtResource("8_1elts")
+region = Rect2(960, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2nng"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1440, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1v12"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1920, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvx5e"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2400, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owtrq"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2880, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_an2is"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3360, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hmwo"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3840, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mntjw"]
+atlas = ExtResource("8_1elts")
+region = Rect2(4320, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsyrt"]
+atlas = ExtResource("8_1elts")
+region = Rect2(0, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k55g7"]
+atlas = ExtResource("8_1elts")
+region = Rect2(480, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_838ym"]
+atlas = ExtResource("8_1elts")
+region = Rect2(960, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcuh3"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1440, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61dxk"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1920, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vochg"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2400, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k06vs"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2880, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wgym"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3360, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7la8"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3840, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2kit"]
+atlas = ExtResource("8_1elts")
+region = Rect2(4320, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04nqj"]
+atlas = ExtResource("8_1elts")
+region = Rect2(0, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k77kj"]
+atlas = ExtResource("8_1elts")
+region = Rect2(480, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt0a8"]
+atlas = ExtResource("8_1elts")
+region = Rect2(960, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssqu0"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1440, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kvai"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1920, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrkt0"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2400, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw17r"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2880, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lkyu"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3360, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uuov"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3840, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4cwh"]
+atlas = ExtResource("8_1elts")
+region = Rect2(4320, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e17jc"]
+atlas = ExtResource("8_1elts")
+region = Rect2(0, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rr5q4"]
+atlas = ExtResource("8_1elts")
+region = Rect2(480, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phbrr"]
+atlas = ExtResource("8_1elts")
+region = Rect2(960, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pca3"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1440, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7re4"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1920, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtfvo"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2400, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mv5r"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2880, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmiik"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3360, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exr81"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3840, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qo2x"]
+atlas = ExtResource("8_1elts")
+region = Rect2(4320, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cldun"]
+atlas = ExtResource("8_1elts")
+region = Rect2(0, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkg7o"]
+atlas = ExtResource("8_1elts")
+region = Rect2(480, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx55e"]
+atlas = ExtResource("8_1elts")
+region = Rect2(960, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2iphd"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1440, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4lry"]
+atlas = ExtResource("8_1elts")
+region = Rect2(1920, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00rm8"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2400, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc8m3"]
+atlas = ExtResource("8_1elts")
+region = Rect2(2880, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82gb8"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3360, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vek8g"]
+atlas = ExtResource("8_1elts")
+region = Rect2(3840, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27tdo"]
+atlas = ExtResource("8_1elts")
+region = Rect2(4320, 1890, 480, 270)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kihgi"]
+animations = [{
+"frames": [SubResource("AtlasTexture_uhqr2"), SubResource("AtlasTexture_a55f0"), SubResource("AtlasTexture_xctrn"), SubResource("AtlasTexture_gtxk5"), SubResource("AtlasTexture_k0v0y"), SubResource("AtlasTexture_rtmku"), SubResource("AtlasTexture_ntwl1"), SubResource("AtlasTexture_ut4b1"), SubResource("AtlasTexture_l7djd"), SubResource("AtlasTexture_e2j8c"), SubResource("AtlasTexture_etw58"), SubResource("AtlasTexture_048p6"), SubResource("AtlasTexture_trw5e"), SubResource("AtlasTexture_63vr7"), SubResource("AtlasTexture_jbkvj"), SubResource("AtlasTexture_x7b5e"), SubResource("AtlasTexture_ngnyd"), SubResource("AtlasTexture_hwith"), SubResource("AtlasTexture_dojxo"), SubResource("AtlasTexture_5lq2u"), SubResource("AtlasTexture_23q88"), SubResource("AtlasTexture_yii52"), SubResource("AtlasTexture_egxnm"), SubResource("AtlasTexture_xbneh"), SubResource("AtlasTexture_24sna"), SubResource("AtlasTexture_sg2y6"), SubResource("AtlasTexture_r3ccc"), SubResource("AtlasTexture_m1j3n"), SubResource("AtlasTexture_wtfcs"), SubResource("AtlasTexture_gyjmj"), SubResource("AtlasTexture_sqmgm"), SubResource("AtlasTexture_nhbb1"), SubResource("AtlasTexture_hiuik"), SubResource("AtlasTexture_o2nng"), SubResource("AtlasTexture_m1v12"), SubResource("AtlasTexture_kvx5e"), SubResource("AtlasTexture_owtrq"), SubResource("AtlasTexture_an2is"), SubResource("AtlasTexture_0hmwo"), SubResource("AtlasTexture_mntjw"), SubResource("AtlasTexture_gsyrt"), SubResource("AtlasTexture_k55g7"), SubResource("AtlasTexture_838ym"), SubResource("AtlasTexture_pcuh3"), SubResource("AtlasTexture_61dxk"), SubResource("AtlasTexture_vochg"), SubResource("AtlasTexture_k06vs"), SubResource("AtlasTexture_0wgym"), SubResource("AtlasTexture_f7la8"), SubResource("AtlasTexture_h2kit"), SubResource("AtlasTexture_04nqj"), SubResource("AtlasTexture_k77kj"), SubResource("AtlasTexture_bt0a8"), SubResource("AtlasTexture_ssqu0"), SubResource("AtlasTexture_6kvai"), SubResource("AtlasTexture_qrkt0"), SubResource("AtlasTexture_jw17r"), SubResource("AtlasTexture_8lkyu"), SubResource("AtlasTexture_5uuov"), SubResource("AtlasTexture_s4cwh"), SubResource("AtlasTexture_e17jc"), SubResource("AtlasTexture_rr5q4"), SubResource("AtlasTexture_phbrr"), SubResource("AtlasTexture_6pca3"), SubResource("AtlasTexture_g7re4"), SubResource("AtlasTexture_mtfvo"), SubResource("AtlasTexture_8mv5r"), SubResource("AtlasTexture_rmiik"), SubResource("AtlasTexture_exr81"), SubResource("AtlasTexture_7qo2x"), SubResource("AtlasTexture_cldun"), SubResource("AtlasTexture_gkg7o"), SubResource("AtlasTexture_rx55e"), SubResource("AtlasTexture_2iphd"), SubResource("AtlasTexture_v4lry"), SubResource("AtlasTexture_00rm8"), SubResource("AtlasTexture_gc8m3"), SubResource("AtlasTexture_82gb8"), SubResource("AtlasTexture_vek8g"), SubResource("AtlasTexture_27tdo")],
+"loop": true,
+"name": &"default",
+"speed": 40.0
+}]
+
+[node name="CheckQuestion" type="Control"]
+custom_minimum_size = Vector2i(1600, 1000)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -1000.0
+offset_right = 800.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_21k6v")
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(1600, 1000)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -1000.0
+offset_right = 800.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2i(1600, 1000)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -1000.0
+offset_right = 800.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1600, 60)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 60.0
+
+[node name="QuizNameLabel" type="Label" parent="VBoxContainer/Control"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "Revision de Preguntas - Evaluación Nombre"
+
+[node name="Control2" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1600, 60)
+offset_top = 60.0
+offset_right = 1600.0
+offset_bottom = 120.0
+theme_override_constants/separation = 0
+
+[node name="StudentName" type="Label" parent="VBoxContainer/Control2"]
+custom_minimum_size = Vector2i(600, 0)
+offset_top = 17.0
+offset_right = 600.0
+offset_bottom = 43.0
+text = "Alumno : Nombre y Apellido"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxScore" type="Label" parent="VBoxContainer/Control2"]
+custom_minimum_size = Vector2i(300, 0)
+offset_left = 600.0
+offset_top = 17.0
+offset_right = 900.0
+offset_bottom = 43.0
+text = "Puntaje Total: 0"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="VBoxContainer/Control2"]
+custom_minimum_size = Vector2i(300, 0)
+offset_left = 900.0
+offset_top = 17.0
+offset_right = 1200.0
+offset_bottom = 43.0
+text = "Puntaje Obtenido: 0"
+horizontal_alignment = 1
+
+[node name="QuizGrade" type="Label" parent="VBoxContainer/Control2"]
+custom_minimum_size = Vector2i(300, 0)
+offset_left = 1200.0
+offset_top = 17.0
+offset_right = 1500.0
+offset_bottom = 43.0
+text = "Nota del alumno: 0"
+horizontal_alignment = 1
+
+[node name="QuestionManager" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(0, 60)
+offset_top = 120.0
+offset_right = 1600.0
+offset_bottom = 180.0
+
+[node name="SelectQuestion" type="OptionButton" parent="VBoxContainer/QuestionManager"]
+custom_minimum_size = Vector2i(620, 40)
+offset_left = 490.0
+offset_top = 10.0
+offset_right = 1110.0
+offset_bottom = 50.0
+theme_override_styles/normal = ExtResource("1_xl1dj")
+theme_override_styles/hover = ExtResource("2_fbbpv")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_6dpya")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_gf1iu")
+alignment = 1
+item_count = 6
+selected = 1
+popup/item_0/text = "Tipo de Pregunta"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Preguntas de Verdadero y Falso"
+popup/item_1/id = 1
+popup/item_2/text = "Preguntas de Selección Múltiple"
+popup/item_2/id = 2
+popup/item_3/text = "Preguntas de Desarrollo"
+popup/item_3/id = 3
+popup/item_4/text = "Preguntas de Piano Virtual"
+popup/item_4/id = 4
+popup/item_5/text = "Preguntas de Partitura"
+popup/item_5/id = 5
+
+[node name="InfoScreen" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1600, 60)
+offset_top = 180.0
+offset_right = 1600.0
+offset_bottom = 240.0
+
+[node name="Label" type="Label" parent="VBoxContainer/InfoScreen"]
+custom_minimum_size = Vector2i(1500, 40)
+offset_left = 50.0
+offset_top = 10.0
+offset_right = 1550.0
+offset_bottom = 50.0
+text = "Las preguntas de Verdadero y Falso y Selección Múltiple, son revisadas automaticamente, y de igual manera es asignado el puntaje."
+vertical_alignment = 1
+
+[node name="QuestionScreen" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1600, 620)
+offset_top = 240.0
+offset_right = 1600.0
+offset_bottom = 920.0
+
+[node name="Control" type="Control" parent="VBoxContainer/QuestionScreen"]
+custom_minimum_size = Vector2i(1500, 680)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 50.0
+offset_right = 1550.0
+offset_bottom = 680.0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/QuestionScreen/Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.470588, 0.470588, 0.470588, 1)
+
+[node name="ToFScroll" type="ScrollContainer" parent="VBoxContainer/QuestionScreen/Control"]
+custom_minimum_size = Vector2i(1500, 680)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -704.5
+offset_right = 704.5
+offset_bottom = 620.0
+grow_horizontal = 2
+follow_focus = true
+vertical_scroll_mode = 2
+
+[node name="List" type="VBoxContainer" parent="VBoxContainer/QuestionScreen/Control/ToFScroll"]
+custom_minimum_size = Vector2i(1500, 680)
+offset_right = 1500.0
+offset_bottom = 680.0
+theme_override_constants/separation = 20
+
+[node name="SelectionScroll" type="ScrollContainer" parent="VBoxContainer/QuestionScreen/Control"]
+visible = false
+custom_minimum_size = Vector2i(1500, 680)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -704.0
+offset_right = 704.0
+offset_bottom = 620.0
+grow_horizontal = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="List" type="VBoxContainer" parent="VBoxContainer/QuestionScreen/Control/SelectionScroll"]
+custom_minimum_size = Vector2i(1500, 680)
+offset_right = 1500.0
+offset_bottom = 680.0
+theme_override_constants/separation = 0
+
+[node name="WrittingScroll" type="ScrollContainer" parent="VBoxContainer/QuestionScreen/Control"]
+visible = false
+custom_minimum_size = Vector2i(1500, 680)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -704.0
+offset_right = 704.0
+offset_bottom = 620.0
+grow_horizontal = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="List" type="VBoxContainer" parent="VBoxContainer/QuestionScreen/Control/WrittingScroll"]
+custom_minimum_size = Vector2i(1500, 680)
+offset_right = 1500.0
+offset_bottom = 680.0
+theme_override_constants/separation = 0
+
+[node name="PianoScroll" type="ScrollContainer" parent="VBoxContainer/QuestionScreen/Control"]
+visible = false
+custom_minimum_size = Vector2i(1500, 680)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -704.0
+offset_right = 704.0
+offset_bottom = 620.0
+grow_horizontal = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="List" type="VBoxContainer" parent="VBoxContainer/QuestionScreen/Control/PianoScroll"]
+custom_minimum_size = Vector2i(1500, 680)
+offset_right = 1500.0
+offset_bottom = 680.0
+theme_override_constants/separation = 0
+
+[node name="MusicSheetScroll" type="ScrollContainer" parent="VBoxContainer/QuestionScreen/Control"]
+visible = false
+custom_minimum_size = Vector2i(1500, 680)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -704.0
+offset_right = 704.0
+offset_bottom = 620.0
+grow_horizontal = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="List" type="VBoxContainer" parent="VBoxContainer/QuestionScreen/Control/MusicSheetScroll"]
+custom_minimum_size = Vector2i(1500, 680)
+offset_right = 1500.0
+offset_bottom = 680.0
+theme_override_constants/separation = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1600, 80)
+offset_top = 920.0
+offset_right = 1600.0
+offset_bottom = 1000.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2i(600, 40)
+offset_left = 500.0
+offset_top = 20.0
+offset_right = 1100.0
+offset_bottom = 60.0
+theme_override_constants/separation = 200
+
+[node name="Cancel" type="Button" parent="VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(200, 40)
+offset_right = 200.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("5_vf6jj")
+theme_override_styles/hover = ExtResource("6_vu3pt")
+theme_override_styles/focus = ExtResource("7_yoxoc")
+text = "Cancelar"
+
+[node name="Save" type="Button" parent="VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(200, 40)
+offset_left = 400.0
+offset_right = 600.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("3_27biw")
+theme_override_styles/hover = ExtResource("4_srkv8")
+theme_override_styles/focus = ExtResource("7_yoxoc")
+text = "Guardar y Salir"
+
+[node name="NoInternetConnection" parent="." instance=ExtResource("9_eg44p")]
+visible = false
+offset_left = -160.0
+offset_top = -80.0
+offset_right = 160.0
+
+[node name="SendQuizToServer" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2i(1600, 1080)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -1080.0
+offset_right = 800.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="SendQuizToServer"]
+custom_minimum_size = Vector2i(1600, 1080)
+offset_top = -5.0
+offset_right = 1600.0
+offset_bottom = 1075.0
+color = Color(0, 0, 0, 0.478431)
+
+[node name="CenterContainer" type="CenterContainer" parent="SendQuizToServer"]
+custom_minimum_size = Vector2i(1600, 1080)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="SendQuizToServer/CenterContainer"]
+custom_minimum_size = Vector2i(604, 204)
+offset_left = 498.0
+offset_top = 438.0
+offset_right = 1102.0
+offset_bottom = 642.0
+color = Color(0.0705882, 0.729412, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="SendQuizToServer/CenterContainer"]
+custom_minimum_size = Vector2i(600, 200)
+offset_left = 500.0
+offset_top = 440.0
+offset_right = 1100.0
+offset_bottom = 640.0
+color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[node name="Saving" type="VBoxContainer" parent="SendQuizToServer/CenterContainer"]
+custom_minimum_size = Vector2i(600, 200)
+offset_left = 500.0
+offset_top = 440.0
+offset_right = 1100.0
+offset_bottom = 640.0
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="SendQuizToServer/CenterContainer/Saving"]
+custom_minimum_size = Vector2i(0, 100)
+offset_right = 600.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 24
+text = "Guardando Revisión"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2d" type="AnimatedSprite2D" parent="SendQuizToServer/CenterContainer/Saving"]
+position = Vector2(300, 128)
+scale = Vector2(0.5, 0.5)
+frames = SubResource("SpriteFrames_kihgi")
+playing = true
+
+[node name="QuizSaved" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2i(1600, 1080)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -1080.0
+offset_right = 800.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="QuizSaved"]
+custom_minimum_size = Vector2i(1600, 1080)
+offset_top = -5.0
+offset_right = 1600.0
+offset_bottom = 1075.0
+color = Color(0, 0, 0, 0.478431)
+
+[node name="CenterContainer" type="CenterContainer" parent="QuizSaved"]
+custom_minimum_size = Vector2i(1600, 1080)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="QuizSaved/CenterContainer"]
+custom_minimum_size = Vector2i(604, 204)
+offset_left = 498.0
+offset_top = 438.0
+offset_right = 1102.0
+offset_bottom = 642.0
+color = Color(0.0705882, 0.729412, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="QuizSaved/CenterContainer"]
+custom_minimum_size = Vector2i(600, 200)
+offset_left = 500.0
+offset_top = 440.0
+offset_right = 1100.0
+offset_bottom = 640.0
+color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[node name="Saving" type="VBoxContainer" parent="QuizSaved/CenterContainer"]
+custom_minimum_size = Vector2i(600, 200)
+offset_left = 500.0
+offset_top = 440.0
+offset_right = 1100.0
+offset_bottom = 640.0
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="QuizSaved/CenterContainer/Saving"]
+custom_minimum_size = Vector2i(0, 100)
+offset_right = 600.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 24
+text = "Revisón Enviada"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="QuizSaved/CenterContainer/Saving"]
+offset_top = 116.0
+offset_right = 600.0
+offset_bottom = 120.0
+
+[node name="GoTo" type="Button" parent="QuizSaved/CenterContainer/Saving"]
+custom_minimum_size = Vector2i(200, 40)
+offset_left = 200.0
+offset_top = 136.0
+offset_right = 400.0
+offset_bottom = 176.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("3_27biw")
+theme_override_styles/hover = ExtResource("4_srkv8")
+text = "Aceptar"
+
+[connection signal="item_selected" from="VBoxContainer/QuestionManager/SelectQuestion" to="." method="_on_select_question_item_selected"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/HBoxContainer/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/HBoxContainer/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="QuizSaved/CenterContainer/Saving/GoTo" to="." method="_on_go_to_pressed"]

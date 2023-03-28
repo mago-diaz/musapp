@@ -1,0 +1,116 @@
+[gd_scene load_steps=6 format=3 uid="uid://divq2yrac2uc2"]
+
+[ext_resource type="StyleBox" uid="uid://b4r6ml4yts6gy" path="res://Assets/ButtonColor/GreenButtonNormal.tres" id="1_ed7cc"]
+[ext_resource type="Script" path="res://Home/SchoolManager/EditLevel.gd" id="1_t4163"]
+[ext_resource type="StyleBox" uid="uid://ck1raeeejtfaw" path="res://Assets/ButtonColor/GreenButtonHover.tres" id="2_ywo2k"]
+[ext_resource type="StyleBox" uid="uid://cxt3p1cqhcx1g" path="res://Assets/ButtonColor/RedButtonNormal.tres" id="3_r8l7m"]
+[ext_resource type="StyleBox" uid="uid://b1vp12avcsa6q" path="res://Assets/ButtonColor/RedButtonHover.tres" id="4_1sbi1"]
+
+[node name="EditLevel" type="CenterContainer"]
+custom_minimum_size = Vector2i(1400, 80)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -700.0
+offset_right = 700.0
+offset_bottom = 80.0
+grow_horizontal = 2
+script = ExtResource("1_t4163")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(1460, 60)
+offset_top = 10.0
+offset_right = 1460.0
+offset_bottom = 70.0
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2i(1460, 20)
+offset_top = 10.0
+offset_right = 1460.0
+offset_bottom = 70.0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(5, 60)
+offset_right = 5.0
+offset_bottom = 60.0
+color = Color(0.572549, 0.619608, 1, 1)
+
+[node name="VBoxContainer" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1000, 0)
+offset_left = 9.0
+offset_right = 1009.0
+offset_bottom = 60.0
+
+[node name="LevelBox" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2i(600, 40)
+offset_left = 19.0
+offset_top = 10.0
+offset_right = 981.0
+offset_bottom = 50.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 5
+
+[node name="Level" type="Label" parent="VBoxContainer/VBoxContainer/LevelBox"]
+offset_top = 7.0
+offset_right = 50.0
+offset_bottom = 33.0
+text = "Curso:"
+
+[node name="LevelLabel" type="Label" parent="VBoxContainer/VBoxContainer/LevelBox"]
+custom_minimum_size = Vector2i(220, 0)
+offset_left = 55.0
+offset_top = 7.0
+offset_right = 275.0
+offset_bottom = 33.0
+text = "INSERTE CURSO"
+clip_text = true
+
+[node name="Grade" type="Label" parent="VBoxContainer/VBoxContainer/LevelBox"]
+offset_left = 280.0
+offset_top = 7.0
+offset_right = 337.0
+offset_bottom = 33.0
+text = "Letras: "
+
+[node name="GradesLabel" type="Label" parent="VBoxContainer/VBoxContainer/LevelBox"]
+custom_minimum_size = Vector2i(620, 0)
+offset_left = 342.0
+offset_top = 7.0
+offset_right = 962.0
+offset_bottom = 33.0
+text = "A - B - C - D - E - F - G - H - I - J -  K - L - M - N - O - P - Q - R - S - T - U - V - W - X - Y - Z"
+clip_text = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(242, 60)
+offset_left = 1013.0
+offset_right = 1443.0
+offset_bottom = 60.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer"]
+offset_top = 10.0
+offset_right = 430.0
+offset_bottom = 50.0
+theme_override_constants/separation = 30
+
+[node name="EditLevel" type="Button" parent="VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(200, 40)
+offset_right = 200.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("1_ed7cc")
+theme_override_styles/hover = ExtResource("2_ywo2k")
+text = "Editar Curso"
+
+[node name="DeleteLevel" type="Button" parent="VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(200, 40)
+offset_left = 230.0
+offset_right = 430.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("3_r8l7m")
+theme_override_styles/hover = ExtResource("4_1sbi1")
+text = "Eliminar Curso"
+
+[connection signal="pressed" from="VBoxContainer/CenterContainer/HBoxContainer/EditLevel" to="." method="_on_edit_level_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/HBoxContainer/DeleteLevel" to="." method="_on_delete_level_pressed"]

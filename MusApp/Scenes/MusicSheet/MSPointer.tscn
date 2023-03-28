@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://citd5oy7l1o73"]
+
+[ext_resource type="Script" path="res://Scenes/MusicSheet/MSPointer.gd" id="1_ueotq"]
+[ext_resource type="Texture2D" uid="uid://dc8tq1anajeji" path="res://Assets/cat_tesis.png" id="2_qco8i"]
+
+[node name="MSPointer" type="Control"]
+custom_minimum_size = Vector2i(16, 16)
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -12.5
+offset_right = 25.0
+offset_bottom = 12.5
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_ueotq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qco8i")
+ignore_texture_size = true

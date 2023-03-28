@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba0blc75lvtii"]
+
+[ext_resource type="PackedScene" uid="uid://bkaax5tv42rpm" path="res://Scenes/MusicSheet/MusicSheet.tscn" id="1_85jmp"]
+[ext_resource type="Script" path="res://TypeOfQuestion/MusicSheet/MusicSheet.gd" id="1_anh7j"]
+
+[node name="MusicSheet" type="Control"]
+custom_minimum_size = Vector2i(1600, 640)
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -800.0
+offset_right = 800.0
+offset_bottom = 620.0
+grow_horizontal = 2
+script = ExtResource("1_anh7j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2i(1600, 620)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.713726, 0.713726, 0.713726, 1)
+
+[node name="MusicSheet" parent="." instance=ExtResource("1_85jmp")]

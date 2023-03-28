@@ -1,0 +1,839 @@
+[gd_scene load_steps=90 format=3 uid="uid://bsw1mb4ns1ex8"]
+
+[ext_resource type="StyleBox" uid="uid://b5l8bij5x63n3" path="res://Assets/ButtonColor/BlueButtonNormal.tres" id="1_8lsrt"]
+[ext_resource type="Script" path="res://Home/SchoolManager/EditSceens/EditStudentScreen.gd" id="1_jrqa3"]
+[ext_resource type="StyleBox" uid="uid://bt60dr6ro1cwu" path="res://Assets/ButtonColor/BlueButtonHover.tres" id="2_ug50x"]
+[ext_resource type="StyleBox" uid="uid://cxt3p1cqhcx1g" path="res://Assets/ButtonColor/RedButtonNormal.tres" id="3_b6iqc"]
+[ext_resource type="StyleBox" uid="uid://b1vp12avcsa6q" path="res://Assets/ButtonColor/RedButtonHover.tres" id="4_usv8m"]
+[ext_resource type="StyleBox" uid="uid://b4r6ml4yts6gy" path="res://Assets/ButtonColor/GreenButtonNormal.tres" id="5_25wch"]
+[ext_resource type="StyleBox" uid="uid://ck1raeeejtfaw" path="res://Assets/ButtonColor/GreenButtonHover.tres" id="6_8w2k0"]
+[ext_resource type="Texture2D" uid="uid://b75b3p3lqd04c" path="res://Assets/Loading/loading.png" id="8_j54hr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhqr2"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(0, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a55f0"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(480, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xctrn"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(960, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtxk5"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1440, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0v0y"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1920, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtmku"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2400, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntwl1"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2880, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ut4b1"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3360, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7djd"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3840, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2j8c"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(4320, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etw58"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(0, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_048p6"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(480, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trw5e"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(960, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63vr7"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1440, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbkvj"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1920, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7b5e"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2400, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngnyd"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2880, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwith"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3360, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dojxo"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3840, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lq2u"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(4320, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23q88"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(0, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yii52"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(480, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egxnm"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(960, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbneh"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1440, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24sna"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1920, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg2y6"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2400, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3ccc"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2880, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1j3n"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3360, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtfcs"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3840, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyjmj"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(4320, 540, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqmgm"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(0, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhbb1"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(480, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiuik"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(960, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2nng"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1440, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1v12"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1920, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvx5e"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2400, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owtrq"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2880, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_an2is"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3360, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hmwo"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3840, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mntjw"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(4320, 810, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsyrt"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(0, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k55g7"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(480, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_838ym"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(960, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcuh3"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1440, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61dxk"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1920, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vochg"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2400, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k06vs"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2880, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wgym"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3360, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7la8"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3840, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2kit"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(4320, 1080, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04nqj"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(0, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k77kj"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(480, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt0a8"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(960, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssqu0"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1440, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kvai"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1920, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrkt0"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2400, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw17r"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2880, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lkyu"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3360, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uuov"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3840, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4cwh"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(4320, 1350, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e17jc"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(0, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rr5q4"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(480, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phbrr"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(960, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pca3"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1440, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7re4"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1920, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtfvo"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2400, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mv5r"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2880, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmiik"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3360, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exr81"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3840, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qo2x"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(4320, 1620, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cldun"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(0, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkg7o"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(480, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx55e"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(960, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2iphd"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1440, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4lry"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(1920, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00rm8"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2400, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc8m3"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(2880, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82gb8"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3360, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vek8g"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(3840, 1890, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27tdo"]
+atlas = ExtResource("8_j54hr")
+region = Rect2(4320, 1890, 480, 270)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ot8tl"]
+animations = [{
+"frames": [SubResource("AtlasTexture_uhqr2"), SubResource("AtlasTexture_a55f0"), SubResource("AtlasTexture_xctrn"), SubResource("AtlasTexture_gtxk5"), SubResource("AtlasTexture_k0v0y"), SubResource("AtlasTexture_rtmku"), SubResource("AtlasTexture_ntwl1"), SubResource("AtlasTexture_ut4b1"), SubResource("AtlasTexture_l7djd"), SubResource("AtlasTexture_e2j8c"), SubResource("AtlasTexture_etw58"), SubResource("AtlasTexture_048p6"), SubResource("AtlasTexture_trw5e"), SubResource("AtlasTexture_63vr7"), SubResource("AtlasTexture_jbkvj"), SubResource("AtlasTexture_x7b5e"), SubResource("AtlasTexture_ngnyd"), SubResource("AtlasTexture_hwith"), SubResource("AtlasTexture_dojxo"), SubResource("AtlasTexture_5lq2u"), SubResource("AtlasTexture_23q88"), SubResource("AtlasTexture_yii52"), SubResource("AtlasTexture_egxnm"), SubResource("AtlasTexture_xbneh"), SubResource("AtlasTexture_24sna"), SubResource("AtlasTexture_sg2y6"), SubResource("AtlasTexture_r3ccc"), SubResource("AtlasTexture_m1j3n"), SubResource("AtlasTexture_wtfcs"), SubResource("AtlasTexture_gyjmj"), SubResource("AtlasTexture_sqmgm"), SubResource("AtlasTexture_nhbb1"), SubResource("AtlasTexture_hiuik"), SubResource("AtlasTexture_o2nng"), SubResource("AtlasTexture_m1v12"), SubResource("AtlasTexture_kvx5e"), SubResource("AtlasTexture_owtrq"), SubResource("AtlasTexture_an2is"), SubResource("AtlasTexture_0hmwo"), SubResource("AtlasTexture_mntjw"), SubResource("AtlasTexture_gsyrt"), SubResource("AtlasTexture_k55g7"), SubResource("AtlasTexture_838ym"), SubResource("AtlasTexture_pcuh3"), SubResource("AtlasTexture_61dxk"), SubResource("AtlasTexture_vochg"), SubResource("AtlasTexture_k06vs"), SubResource("AtlasTexture_0wgym"), SubResource("AtlasTexture_f7la8"), SubResource("AtlasTexture_h2kit"), SubResource("AtlasTexture_04nqj"), SubResource("AtlasTexture_k77kj"), SubResource("AtlasTexture_bt0a8"), SubResource("AtlasTexture_ssqu0"), SubResource("AtlasTexture_6kvai"), SubResource("AtlasTexture_qrkt0"), SubResource("AtlasTexture_jw17r"), SubResource("AtlasTexture_8lkyu"), SubResource("AtlasTexture_5uuov"), SubResource("AtlasTexture_s4cwh"), SubResource("AtlasTexture_e17jc"), SubResource("AtlasTexture_rr5q4"), SubResource("AtlasTexture_phbrr"), SubResource("AtlasTexture_6pca3"), SubResource("AtlasTexture_g7re4"), SubResource("AtlasTexture_mtfvo"), SubResource("AtlasTexture_8mv5r"), SubResource("AtlasTexture_rmiik"), SubResource("AtlasTexture_exr81"), SubResource("AtlasTexture_7qo2x"), SubResource("AtlasTexture_cldun"), SubResource("AtlasTexture_gkg7o"), SubResource("AtlasTexture_rx55e"), SubResource("AtlasTexture_2iphd"), SubResource("AtlasTexture_v4lry"), SubResource("AtlasTexture_00rm8"), SubResource("AtlasTexture_gc8m3"), SubResource("AtlasTexture_82gb8"), SubResource("AtlasTexture_vek8g"), SubResource("AtlasTexture_27tdo")],
+"loop": true,
+"name": &"default",
+"speed": 40.0
+}]
+
+[node name="EditStudentScreen" type="Control"]
+custom_minimum_size = Vector2i(1920, 1080)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jrqa3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.197937, 0.197937, 0.197937, 0.784314)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="CenterContainer"]
+custom_minimum_size = Vector2i(844, 724)
+offset_left = 538.0
+offset_top = 178.0
+offset_right = 1382.0
+offset_bottom = 902.0
+color = Color(0.290196, 0.839216, 1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer"]
+custom_minimum_size = Vector2i(840, 720)
+offset_left = 540.0
+offset_top = 180.0
+offset_right = 1380.0
+offset_bottom = 900.0
+color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2i(800, 200)
+offset_left = 560.0
+offset_top = 217.0
+offset_right = 1360.0
+offset_bottom = 863.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2i(0, 60)
+offset_right = 800.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 24
+text = "Editar Alumno
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+offset_top = 64.0
+offset_right = 800.0
+offset_bottom = 68.0
+
+[node name="EmailBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+offset_top = 72.0
+offset_right = 800.0
+offset_bottom = 104.0
+theme_override_constants/separation = 100
+
+[node name="EmailLabel" type="Label" parent="CenterContainer/VBoxContainer/EmailBox"]
+offset_top = 3.0
+offset_right = 56.0
+offset_bottom = 29.0
+text = "Email *"
+
+[node name="EmailEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/EmailBox"]
+custom_minimum_size = Vector2i(600, 32)
+offset_left = 156.0
+offset_right = 756.0
+offset_bottom = 32.0
+theme_override_styles/normal = ExtResource("1_8lsrt")
+theme_override_styles/focus = ExtResource("1_8lsrt")
+placeholder_text = "ingresa tu email"
+editable = false
+
+[node name="EmailWarning" type="Label" parent="CenterContainer/VBoxContainer"]
+offset_top = 108.0
+offset_right = 800.0
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(0.901961, 0.290196, 0, 1)
+horizontal_alignment = 1
+
+[node name="FirstNameBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+offset_top = 135.0
+offset_right = 800.0
+offset_bottom = 167.0
+theme_override_constants/separation = 24
+
+[node name="FirstNameLabel" type="Label" parent="CenterContainer/VBoxContainer/FirstNameBox"]
+offset_top = 3.0
+offset_right = 132.0
+offset_bottom = 29.0
+text = "Primer nombre *"
+
+[node name="FirstNameEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/FirstNameBox"]
+custom_minimum_size = Vector2i(600, 32)
+offset_left = 156.0
+offset_right = 756.0
+offset_bottom = 32.0
+theme_override_styles/normal = ExtResource("1_8lsrt")
+theme_override_styles/focus = ExtResource("1_8lsrt")
+placeholder_text = "Ingresa el primer nombre"
+
+[node name="FirstNameWarning" type="Label" parent="CenterContainer/VBoxContainer"]
+offset_top = 171.0
+offset_right = 800.0
+offset_bottom = 194.0
+theme_override_colors/font_color = Color(0.901961, 0.290196, 0, 1)
+horizontal_alignment = 1
+
+[node name="MiddleNameBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+offset_top = 198.0
+offset_right = 800.0
+offset_bottom = 230.0
+theme_override_constants/separation = 22
+
+[node name="MiddleNameLabel" type="Label" parent="CenterContainer/VBoxContainer/MiddleNameBox"]
+offset_top = 3.0
+offset_right = 135.0
+offset_bottom = 29.0
+text = "Segundo Nombre"
+
+[node name="MiddleNameEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/MiddleNameBox"]
+custom_minimum_size = Vector2i(600, 32)
+offset_left = 157.0
+offset_right = 757.0
+offset_bottom = 32.0
+theme_override_styles/normal = ExtResource("1_8lsrt")
+theme_override_styles/focus = ExtResource("1_8lsrt")
+placeholder_text = "Ingresa el segundo nombre"
+
+[node name="MiddleNameWarning" type="Label" parent="CenterContainer/VBoxContainer"]
+offset_top = 234.0
+offset_right = 800.0
+offset_bottom = 257.0
+theme_override_colors/font_color = Color(0.901961, 0.290196, 0, 1)
+horizontal_alignment = 1
+
+[node name="LastNameBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+offset_top = 261.0
+offset_right = 800.0
+offset_bottom = 293.0
+theme_override_constants/separation = 24
+
+[node name="LastNameLabel" type="Label" parent="CenterContainer/VBoxContainer/LastNameBox"]
+offset_top = 3.0
+offset_right = 133.0
+offset_bottom = 29.0
+text = "Primer Apellido *"
+
+[node name="LastNameEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/LastNameBox"]
+custom_minimum_size = Vector2i(600, 32)
+offset_left = 157.0
+offset_right = 757.0
+offset_bottom = 32.0
+theme_override_styles/normal = ExtResource("1_8lsrt")
+theme_override_styles/focus = ExtResource("1_8lsrt")
+placeholder_text = "Ingresa el primer apellido"
+
+[node name="LastNameWarning" type="Label" parent="CenterContainer/VBoxContainer"]
+offset_top = 297.0
+offset_right = 800.0
+offset_bottom = 320.0
+theme_override_colors/font_color = Color(0.901961, 0.290196, 0, 1)
+horizontal_alignment = 1
+
+[node name="MothersMaidenNameBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+offset_top = 324.0
+offset_right = 800.0
+offset_bottom = 356.0
+theme_override_constants/separation = 22
+
+[node name="MothersMaidenNameLabel" type="Label" parent="CenterContainer/VBoxContainer/MothersMaidenNameBox"]
+offset_top = 3.0
+offset_right = 135.0
+offset_bottom = 29.0
+text = "Segundo Apellido"
+
+[node name="MothersMaidenNameEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/MothersMaidenNameBox"]
+custom_minimum_size = Vector2i(600, 32)
+offset_left = 157.0
+offset_right = 757.0
+offset_bottom = 32.0
+theme_override_styles/normal = ExtResource("1_8lsrt")
+theme_override_styles/focus = ExtResource("1_8lsrt")
+placeholder_text = "Ingresa el segundo apellido"
+
+[node name="MothersMaidenNameWarning" type="Label" parent="CenterContainer/VBoxContainer"]
+offset_top = 360.0
+offset_right = 800.0
+offset_bottom = 383.0
+theme_override_colors/font_color = Color(0.901961, 0.290196, 0, 1)
+horizontal_alignment = 1
+
+[node name="GradeBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+offset_top = 387.0
+offset_right = 800.0
+offset_bottom = 414.0
+theme_override_constants/separation = 20
+
+[node name="GradeLabel" type="Label" parent="CenterContainer/VBoxContainer/GradeBox"]
+custom_minimum_size = Vector2i(136, 0)
+offset_right = 136.0
+offset_bottom = 26.0
+text = "Curso *"
+
+[node name="LevelOption" type="OptionButton" parent="CenterContainer/VBoxContainer/GradeBox"]
+custom_minimum_size = Vector2i(290, 0)
+offset_left = 156.0
+offset_right = 446.0
+offset_bottom = 27.0
+theme_override_styles/normal = ExtResource("1_8lsrt")
+theme_override_styles/hover = ExtResource("1_8lsrt")
+theme_override_styles/pressed = ExtResource("2_ug50x")
+alignment = 1
+item_count = 1
+selected = 0
+popup/item_0/text = "Seleccione Curso"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+
+[node name="GradeOption" type="OptionButton" parent="CenterContainer/VBoxContainer/GradeBox"]
+custom_minimum_size = Vector2i(290, 0)
+offset_left = 466.0
+offset_right = 756.0
+offset_bottom = 27.0
+theme_override_styles/normal = ExtResource("1_8lsrt")
+theme_override_styles/hover = ExtResource("1_8lsrt")
+theme_override_styles/pressed = ExtResource("2_ug50x")
+alignment = 1
+item_count = 1
+selected = 0
+popup/item_0/text = "Seleccione Letra"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+
+[node name="GradeOptionWarning" type="Label" parent="CenterContainer/VBoxContainer"]
+offset_top = 418.0
+offset_right = 800.0
+offset_bottom = 441.0
+theme_override_colors/font_color = Color(0.901961, 0.290196, 0, 1)
+horizontal_alignment = 1
+
+[node name="NewPassword" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+offset_top = 445.0
+offset_right = 800.0
+offset_bottom = 477.0
+theme_override_constants/separation = 195
+
+[node name="NewPasswordLabel" type="Label" parent="CenterContainer/VBoxContainer/NewPassword"]
+offset_top = 3.0
+offset_right = 141.0
+offset_bottom = 29.0
+text = "Nueva contraseña"
+
+[node name="NewPasswordEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/NewPassword"]
+custom_minimum_size = Vector2i(420, 32)
+offset_left = 336.0
+offset_right = 756.0
+offset_bottom = 32.0
+theme_override_styles/normal = ExtResource("1_8lsrt")
+theme_override_styles/focus = ExtResource("1_8lsrt")
+placeholder_text = "Ingresa la nueva contraseña (numeros y/o letras) . . ."
+secret = true
+
+[node name="NewPasswordWarning" type="Label" parent="CenterContainer/VBoxContainer"]
+offset_top = 481.0
+offset_right = 800.0
+offset_bottom = 504.0
+theme_override_colors/font_color = Color(0.901961, 0.290196, 0, 1)
+horizontal_alignment = 1
+
+[node name="ConfirmPassword" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+offset_top = 508.0
+offset_right = 800.0
+offset_bottom = 540.0
+theme_override_constants/separation = 110
+
+[node name="ConfirmPasswordLabel" type="Label" parent="CenterContainer/VBoxContainer/ConfirmPassword"]
+offset_top = 3.0
+offset_right = 226.0
+offset_bottom = 29.0
+text = "Confirmar Nueva Contraseña"
+
+[node name="ConfirmPasswordEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/ConfirmPassword"]
+custom_minimum_size = Vector2i(420, 32)
+offset_left = 336.0
+offset_right = 756.0
+offset_bottom = 32.0
+theme_override_styles/normal = ExtResource("1_8lsrt")
+theme_override_styles/focus = ExtResource("1_8lsrt")
+placeholder_text = "Vuelve a ingresar la nueva contraseña . . ."
+secret = true
+
+[node name="ConfirmPasswordWarning" type="Label" parent="CenterContainer/VBoxContainer"]
+offset_top = 544.0
+offset_right = 800.0
+offset_bottom = 567.0
+theme_override_colors/font_color = Color(0.901961, 0.290196, 0, 1)
+horizontal_alignment = 1
+
+[node name="Warning" type="Label" parent="CenterContainer/VBoxContainer"]
+offset_top = 571.0
+offset_right = 800.0
+offset_bottom = 594.0
+theme_override_font_sizes/font_size = 14
+text = "* Los campos son obligatorios
+"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+offset_top = 598.0
+offset_right = 800.0
+offset_bottom = 602.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2i(0, 40)
+offset_top = 606.0
+offset_right = 800.0
+offset_bottom = 646.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer"]
+offset_left = 170.0
+offset_top = 4.0
+offset_right = 630.0
+offset_bottom = 36.0
+theme_override_constants/separation = 60
+
+[node name="ExitEditStudent" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(200, 32)
+offset_right = 200.0
+offset_bottom = 32.0
+theme_override_styles/normal = ExtResource("3_b6iqc")
+theme_override_styles/hover = ExtResource("4_usv8m")
+text = "Volver
+"
+
+[node name="SaveEditStudent" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(200, 0)
+offset_left = 260.0
+offset_right = 460.0
+offset_bottom = 32.0
+theme_override_styles/normal = ExtResource("5_25wch")
+theme_override_styles/hover = ExtResource("6_8w2k0")
+text = "Guardar Usuario"
+
+[node name="SendStudentToServer" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2i(1920, 1080)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -1080.0
+offset_right = 800.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="SendStudentToServer"]
+custom_minimum_size = Vector2i(1920, 1080)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="SendStudentToServer/CenterContainer"]
+custom_minimum_size = Vector2i(604, 204)
+offset_left = 658.0
+offset_top = 438.0
+offset_right = 1262.0
+offset_bottom = 642.0
+color = Color(0.0705882, 0.729412, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="SendStudentToServer/CenterContainer"]
+custom_minimum_size = Vector2i(600, 200)
+offset_left = 660.0
+offset_top = 440.0
+offset_right = 1260.0
+offset_bottom = 640.0
+color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[node name="Saving" type="VBoxContainer" parent="SendStudentToServer/CenterContainer"]
+custom_minimum_size = Vector2i(600, 200)
+offset_left = 660.0
+offset_top = 440.0
+offset_right = 1260.0
+offset_bottom = 640.0
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="SendStudentToServer/CenterContainer/Saving"]
+custom_minimum_size = Vector2i(0, 100)
+offset_right = 600.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 24
+text = "Guardando Estudiante"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2d" type="AnimatedSprite2D" parent="SendStudentToServer/CenterContainer/Saving"]
+position = Vector2(300, 128)
+scale = Vector2(0.5, 0.5)
+frames = SubResource("SpriteFrames_ot8tl")
+playing = true
+
+[node name="StudentSaved" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2i(1920, 1080)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -1080.0
+offset_right = 800.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="StudentSaved"]
+custom_minimum_size = Vector2i(1920, 1080)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="StudentSaved/CenterContainer"]
+custom_minimum_size = Vector2i(604, 204)
+offset_left = 658.0
+offset_top = 438.0
+offset_right = 1262.0
+offset_bottom = 642.0
+color = Color(0.0705882, 0.729412, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="StudentSaved/CenterContainer"]
+custom_minimum_size = Vector2i(600, 200)
+offset_left = 660.0
+offset_top = 440.0
+offset_right = 1260.0
+offset_bottom = 640.0
+color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[node name="Saving" type="VBoxContainer" parent="StudentSaved/CenterContainer"]
+custom_minimum_size = Vector2i(600, 200)
+offset_left = 660.0
+offset_top = 440.0
+offset_right = 1260.0
+offset_bottom = 640.0
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="StudentSaved/CenterContainer/Saving"]
+custom_minimum_size = Vector2i(0, 100)
+offset_right = 600.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 24
+text = "Estudiante Editado"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="StudentSaved/CenterContainer/Saving"]
+offset_top = 116.0
+offset_right = 600.0
+offset_bottom = 120.0
+
+[node name="GoTo" type="Button" parent="StudentSaved/CenterContainer/Saving"]
+custom_minimum_size = Vector2i(200, 40)
+offset_left = 200.0
+offset_top = 136.0
+offset_right = 400.0
+offset_bottom = 176.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("5_25wch")
+theme_override_styles/hover = ExtResource("6_8w2k0")
+text = "Aceptar"
+
+[connection signal="text_changed" from="CenterContainer/VBoxContainer/FirstNameBox/FirstNameEdit" to="." method="_on_first_name_edit_text_changed"]
+[connection signal="text_changed" from="CenterContainer/VBoxContainer/MiddleNameBox/MiddleNameEdit" to="." method="_on_middle_name_edit_text_changed"]
+[connection signal="text_changed" from="CenterContainer/VBoxContainer/LastNameBox/LastNameEdit" to="." method="_on_last_name_edit_text_changed"]
+[connection signal="text_changed" from="CenterContainer/VBoxContainer/MothersMaidenNameBox/MothersMaidenNameEdit" to="." method="_on_mothers_maiden_name_edit_text_changed"]
+[connection signal="item_selected" from="CenterContainer/VBoxContainer/GradeBox/LevelOption" to="." method="_on_level_option_item_selected"]
+[connection signal="item_selected" from="CenterContainer/VBoxContainer/GradeBox/GradeOption" to="." method="_on_grade_option_item_selected"]
+[connection signal="text_changed" from="CenterContainer/VBoxContainer/NewPassword/NewPasswordEdit" to="." method="_on_new_password_edit_text_changed"]
+[connection signal="text_changed" from="CenterContainer/VBoxContainer/ConfirmPassword/ConfirmPasswordEdit" to="." method="_on_confirm_password_edit_text_changed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer/ExitEditStudent" to="." method="_on_exit_edit_student_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer/SaveEditStudent" to="." method="_on_save_edit_student_pressed"]
+[connection signal="pressed" from="StudentSaved/CenterContainer/Saving/GoTo" to="." method="_on_go_to_pressed"]

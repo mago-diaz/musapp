@@ -1,0 +1,796 @@
+[gd_scene load_steps=12 format=3 uid="uid://bkaax5tv42rpm"]
+
+[ext_resource type="Script" path="res://Scenes/MusicSheet/MusicSheet.gd" id="1_tm13j"]
+[ext_resource type="StyleBox" uid="uid://b5l8bij5x63n3" path="res://Assets/ButtonColor/BlueButtonNormal.tres" id="2_ecpkw"]
+[ext_resource type="StyleBox" uid="uid://bt60dr6ro1cwu" path="res://Assets/ButtonColor/BlueButtonHover.tres" id="3_3isx3"]
+[ext_resource type="StyleBox" uid="uid://cxt3p1cqhcx1g" path="res://Assets/ButtonColor/RedButtonNormal.tres" id="4_00qm8"]
+[ext_resource type="StyleBox" uid="uid://b4r6ml4yts6gy" path="res://Assets/ButtonColor/GreenButtonNormal.tres" id="4_e1loh"]
+[ext_resource type="Theme" uid="uid://pxrnkdb26ege" path="res://Assets/ButtonColor/Default.tres" id="4_k3kcu"]
+[ext_resource type="StyleBox" uid="uid://b1vp12avcsa6q" path="res://Assets/ButtonColor/RedButtonHover.tres" id="5_5ogkc"]
+[ext_resource type="Texture2D" uid="uid://blmsdqaosp85n" path="res://Assets/Keyboard.png" id="5_6pp4r"]
+[ext_resource type="StyleBox" uid="uid://ck1raeeejtfaw" path="res://Assets/ButtonColor/GreenButtonHover.tres" id="5_71c6l"]
+[ext_resource type="StyleBox" uid="uid://bw8ypx0hhphn8" path="res://Assets/ButtonColor/GreenColorFocus.tres" id="6_740oo"]
+[ext_resource type="PackedScene" uid="uid://boa3sls2sg5bj" path="res://Scenes/MusicSheet/PreMeasure.tscn" id="7_g2ury"]
+
+[node name="MusicSheet" type="Control"]
+custom_minimum_size = Vector2i(1500, 640)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = -200.0
+offset_right = 750.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tm13j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2i(0, 452)
+offset_right = 1500.0
+offset_bottom = 452.0
+theme_override_constants/separation = 4
+
+[node name="Manager" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1500, 40)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1500.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Manager"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 60
+
+[node name="Settings" type="Button" parent="VBoxContainer/Manager/HBoxContainer"]
+custom_minimum_size = Vector2i(300, 32)
+offset_right = 300.0
+offset_bottom = 40.0
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 0
+theme_override_styles/normal = ExtResource("2_ecpkw")
+theme_override_styles/hover = ExtResource("3_3isx3")
+text = "Configuraciones"
+
+[node name="Play" type="Button" parent="VBoxContainer/Manager/HBoxContainer"]
+custom_minimum_size = Vector2i(300, 0)
+offset_left = 360.0
+offset_right = 660.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("4_e1loh")
+theme_override_styles/hover = ExtResource("3_3isx3")
+toggle_mode = true
+text = "Reproducir"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+offset_top = 44.0
+offset_right = 1500.0
+offset_bottom = 48.0
+
+[node name="Sheet" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(0, 400)
+layout_mode = 3
+anchors_preset = 0
+offset_top = 52.0
+offset_right = 1500.0
+offset_bottom = 452.0
+mouse_filter = 1
+
+[node name="Background" type="ColorRect" parent="VBoxContainer/Sheet"]
+custom_minimum_size = Vector2i(1500, 400)
+offset_right = 1500.0
+offset_bottom = 400.0
+mouse_filter = 1
+color = Color(0.831373, 0.831373, 0.831373, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Sheet"]
+custom_minimum_size = Vector2i(1500, 400)
+offset_right = 1508.0
+offset_bottom = 400.0
+mouse_filter = 0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="HFlowContainer" type="HFlowContainer" parent="VBoxContainer/Sheet/ScrollContainer"]
+custom_minimum_size = Vector2i(1500, 170)
+offset_right = 1500.0
+offset_bottom = 170.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 30
+
+[node name="Instructions" type="VBoxContainer" parent="VBoxContainer"]
+offset_top = 456.0
+offset_right = 1500.0
+offset_bottom = 640.0
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer/Instructions"]
+offset_right = 1500.0
+offset_bottom = 184.0
+theme_override_constants/separation = 30
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Instructions/HBoxContainer6"]
+offset_right = 360.0
+offset_bottom = 184.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer2"]
+offset_right = 360.0
+offset_bottom = 26.0
+text = "Teclas para manejar el cursor: "
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer2"]
+offset_top = 30.0
+offset_right = 360.0
+offset_bottom = 34.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer2"]
+offset_top = 38.0
+offset_right = 360.0
+offset_bottom = 124.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer2/VBoxContainer"]
+offset_right = 360.0
+offset_bottom = 26.0
+text = "Mover cursor hacia arriba: [Flecha haca arriba]"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer2/VBoxContainer"]
+offset_top = 30.0
+offset_right = 360.0
+offset_bottom = 56.0
+text = "Mover cursor hacia abajo: [Flecha haca abajo]"
+
+[node name="Label3" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer2/VBoxContainer"]
+offset_top = 60.0
+offset_right = 360.0
+offset_bottom = 86.0
+text = "Borrar una nota:  [Delete] "
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/Instructions/HBoxContainer6"]
+offset_left = 390.0
+offset_right = 394.0
+offset_bottom = 184.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Instructions/HBoxContainer6"]
+offset_left = 424.0
+offset_right = 719.0
+offset_bottom = 184.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer"]
+offset_right = 295.0
+offset_bottom = 26.0
+text = "Teclas para insertar figuras musicales:"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer"]
+offset_top = 30.0
+offset_right = 295.0
+offset_bottom = 34.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer"]
+offset_top = 38.0
+offset_right = 295.0
+offset_bottom = 184.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer/VBoxContainer"]
+offset_right = 295.0
+offset_bottom = 26.0
+text = "Redonda:         [A]"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer/VBoxContainer"]
+offset_top = 30.0
+offset_right = 295.0
+offset_bottom = 56.0
+text = "Blanca:             [S]"
+
+[node name="Label3" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer/VBoxContainer"]
+offset_top = 60.0
+offset_right = 295.0
+offset_bottom = 86.0
+text = "Negra:              [D]"
+
+[node name="Label4" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer/VBoxContainer"]
+offset_top = 90.0
+offset_right = 295.0
+offset_bottom = 116.0
+text = "Corchea:          [F]"
+
+[node name="Label5" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer/VBoxContainer"]
+offset_top = 120.0
+offset_right = 295.0
+offset_bottom = 146.0
+text = "SemiCorchea: [G]"
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/Instructions/HBoxContainer6"]
+offset_left = 749.0
+offset_right = 753.0
+offset_bottom = 184.0
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/Instructions/HBoxContainer6"]
+offset_left = 783.0
+offset_right = 1091.0
+offset_bottom = 184.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer3"]
+offset_right = 308.0
+offset_bottom = 26.0
+text = "Teclas para insertar silencios musicales:"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer3"]
+offset_top = 30.0
+offset_right = 308.0
+offset_bottom = 34.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer3"]
+offset_top = 38.0
+offset_right = 308.0
+offset_bottom = 184.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer3/VBoxContainer"]
+offset_right = 308.0
+offset_bottom = 26.0
+text = "Silencio de Redonda:         [Q]"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer3/VBoxContainer"]
+offset_top = 30.0
+offset_right = 308.0
+offset_bottom = 56.0
+text = "Silencio de Blanca:             [W]"
+
+[node name="Label3" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer3/VBoxContainer"]
+offset_top = 60.0
+offset_right = 308.0
+offset_bottom = 86.0
+text = "Silencio de Negra:              [E]"
+
+[node name="Label4" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer3/VBoxContainer"]
+offset_top = 90.0
+offset_right = 308.0
+offset_bottom = 116.0
+text = "Silencio de Corchea:          [R]"
+
+[node name="Label5" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer3/VBoxContainer"]
+offset_top = 120.0
+offset_right = 308.0
+offset_bottom = 146.0
+text = "Silencio de SemiCorchea: [T]"
+
+[node name="VSeparator3" type="VSeparator" parent="VBoxContainer/Instructions/HBoxContainer6"]
+offset_left = 1121.0
+offset_right = 1125.0
+offset_bottom = 184.0
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer/Instructions/HBoxContainer6"]
+offset_left = 1155.0
+offset_right = 1498.0
+offset_bottom = 184.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer4"]
+offset_right = 343.0
+offset_bottom = 26.0
+text = "Teclas para insertar alteraciones a una nota:"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer4"]
+offset_top = 30.0
+offset_right = 343.0
+offset_bottom = 34.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer4"]
+offset_top = 38.0
+offset_right = 343.0
+offset_bottom = 180.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer4/VBoxContainer"]
+offset_right = 343.0
+offset_bottom = 26.0
+text = "Bemoles:    [CTRL] + Nota        (Ej: CTRL + D)"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer4/VBoxContainer"]
+offset_top = 30.0
+offset_right = 343.0
+offset_bottom = 56.0
+text = "Sostenido:  [SHIFT] + Nota      (Ej: SHIFT + D)"
+
+[node name="Label3" type="Label" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer4/VBoxContainer"]
+offset_top = 60.0
+offset_right = 343.0
+offset_bottom = 86.0
+text = "Becuadro:   [ALT] +Nota          (Ej: ALT + D)"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer4/VBoxContainer"]
+offset_top = 90.0
+offset_right = 343.0
+offset_bottom = 142.0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer4/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2i(244, 52)
+offset_left = 49.0
+offset_right = 293.0
+offset_bottom = 52.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Instructions/HBoxContainer6/VBoxContainer4/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2i(240, 50)
+offset_left = 51.0
+offset_top = 1.0
+offset_right = 291.0
+offset_bottom = 51.0
+texture = ExtResource("5_6pp4r")
+ignore_texture_size = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Instructions"]
+visible = false
+custom_minimum_size = Vector2i(0, 32)
+offset_right = 1500.0
+offset_bottom = 32.0
+theme_override_constants/separation = 6
+
+[node name="Label7" type="Label" parent="VBoxContainer/Instructions/HBoxContainer2"]
+offset_top = 3.0
+offset_right = 218.0
+offset_bottom = 29.0
+text = "Teclas para mover el cursor:"
+
+[node name="Label8" type="Label" parent="VBoxContainer/Instructions/HBoxContainer2"]
+custom_minimum_size = Vector2i(517, 0)
+offset_left = 224.0
+offset_top = 3.0
+offset_right = 741.0
+offset_bottom = 29.0
+text = "Flecha Arriba/Flecha Abajo"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/Instructions/HBoxContainer2"]
+custom_minimum_size = Vector2i(20, 0)
+offset_left = 747.0
+offset_right = 767.0
+offset_bottom = 32.0
+
+[node name="Label9" type="Label" parent="VBoxContainer/Instructions/HBoxContainer2"]
+offset_left = 773.0
+offset_top = 3.0
+offset_right = 1057.0
+offset_bottom = 29.0
+text = "Teclas para borrar figuras musicales:"
+
+[node name="Label10" type="Label" parent="VBoxContainer/Instructions/HBoxContainer2"]
+offset_left = 1063.0
+offset_top = 3.0
+offset_right = 1120.0
+offset_bottom = 29.0
+text = "DELETE"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Instructions"]
+visible = false
+custom_minimum_size = Vector2i(0, 2)
+offset_right = 1500.0
+offset_bottom = 26.0
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer"]
+offset_right = 371.0
+offset_bottom = 26.0
+text = "Teclas para insertar figuras musicales (Sonidos):"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Instructions/HBoxContainer"]
+offset_left = 391.0
+offset_right = 479.0
+offset_bottom = 26.0
+text = "Redonda: A"
+
+[node name="Label3" type="Label" parent="VBoxContainer/Instructions/HBoxContainer"]
+offset_left = 499.0
+offset_right = 569.0
+offset_bottom = 26.0
+text = "Blanca: S"
+
+[node name="Label4" type="Label" parent="VBoxContainer/Instructions/HBoxContainer"]
+offset_left = 589.0
+offset_right = 657.0
+offset_bottom = 26.0
+text = "Negra: D"
+
+[node name="Label5" type="Label" parent="VBoxContainer/Instructions/HBoxContainer"]
+offset_left = 677.0
+offset_right = 758.0
+offset_bottom = 26.0
+text = "Corchea: F"
+
+[node name="Label6" type="Label" parent="VBoxContainer/Instructions/HBoxContainer"]
+offset_left = 778.0
+offset_right = 900.0
+offset_bottom = 26.0
+text = "SemiCorchea: G
+"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/Instructions"]
+visible = false
+offset_right = 1500.0
+offset_bottom = 26.0
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer4"]
+offset_right = 377.0
+offset_bottom = 26.0
+text = "Teclas para insertar figuras musicales (Silencios):"
+
+[node name="Label7" type="Label" parent="VBoxContainer/Instructions/HBoxContainer4"]
+offset_left = 397.0
+offset_right = 551.0
+offset_bottom = 26.0
+text = "Silencio Redonda: Q"
+
+[node name="Label8" type="Label" parent="VBoxContainer/Instructions/HBoxContainer4"]
+offset_left = 571.0
+offset_right = 710.0
+offset_bottom = 26.0
+text = "Silencio Blanca: W"
+
+[node name="Label9" type="Label" parent="VBoxContainer/Instructions/HBoxContainer4"]
+offset_left = 730.0
+offset_right = 858.0
+offset_bottom = 26.0
+text = "Silencio Negra: E"
+
+[node name="Label10" type="Label" parent="VBoxContainer/Instructions/HBoxContainer4"]
+offset_left = 878.0
+offset_right = 1024.0
+offset_bottom = 26.0
+text = "Silencio Corchea: R"
+
+[node name="Label11" type="Label" parent="VBoxContainer/Instructions/HBoxContainer4"]
+offset_left = 1044.0
+offset_right = 1227.0
+offset_bottom = 26.0
+text = "Silencio SemiCorchea: T"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/Instructions"]
+visible = false
+custom_minimum_size = Vector2i(0, 32)
+offset_right = 1500.0
+offset_bottom = 32.0
+theme_override_constants/separation = 6
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer3"]
+custom_minimum_size = Vector2i(200, 0)
+offset_top = 3.0
+offset_right = 235.0
+offset_bottom = 29.0
+text = "Teclas para añadir Sostenidos:"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Instructions/HBoxContainer3"]
+custom_minimum_size = Vector2i(500, 0)
+offset_left = 241.0
+offset_top = 3.0
+offset_right = 741.0
+offset_bottom = 29.0
+text = "SHIFT + Tecla para insertar figura (Ejemplo:  SHIFT + A)"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/Instructions/HBoxContainer3"]
+custom_minimum_size = Vector2i(20, 0)
+offset_left = 747.0
+offset_right = 767.0
+offset_bottom = 32.0
+
+[node name="Label3" type="Label" parent="VBoxContainer/Instructions/HBoxContainer3"]
+custom_minimum_size = Vector2i(200, 0)
+offset_left = 773.0
+offset_top = 3.0
+offset_right = 990.0
+offset_bottom = 29.0
+text = "Teclas para añadir Bemoles:"
+
+[node name="Label4" type="Label" parent="VBoxContainer/Instructions/HBoxContainer3"]
+offset_left = 996.0
+offset_top = 3.0
+offset_right = 1402.0
+offset_bottom = 29.0
+text = "CTRL + Tecla para insertar figura (Ejemplo:  CTRL + A)"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/Instructions"]
+visible = false
+custom_minimum_size = Vector2i(0, 32)
+offset_right = 1500.0
+offset_bottom = 32.0
+theme_override_constants/separation = 6
+
+[node name="Label" type="Label" parent="VBoxContainer/Instructions/HBoxContainer5"]
+custom_minimum_size = Vector2i(200, 0)
+offset_top = 3.0
+offset_right = 232.0
+offset_bottom = 29.0
+text = "Teclas para añadir Becuadros:"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Instructions/HBoxContainer5"]
+custom_minimum_size = Vector2i(500, 0)
+offset_left = 238.0
+offset_top = 3.0
+offset_right = 738.0
+offset_bottom = 29.0
+text = "Alt + Tecla para insertar figura (Ejemplo:  Alt+ A)"
+
+[node name="SettingContainer" type="CenterContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2i(1500, 500)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="SettingContainer"]
+custom_minimum_size = Vector2i(800, 500)
+offset_left = 350.0
+offset_right = 1150.0
+offset_bottom = 500.0
+color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingContainer"]
+custom_minimum_size = Vector2i(800, 400)
+offset_left = 350.0
+offset_top = 8.0
+offset_right = 1150.0
+offset_bottom = 492.0
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingContainer/VBoxContainer"]
+offset_right = 800.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 26
+text = "Configuracion"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="SettingContainer/VBoxContainer"]
+offset_top = 49.0
+offset_right = 800.0
+offset_bottom = 53.0
+
+[node name="KeyHbox" type="HBoxContainer" parent="SettingContainer/VBoxContainer"]
+offset_top = 63.0
+offset_right = 800.0
+offset_bottom = 90.0
+
+[node name="Label" type="Label" parent="SettingContainer/VBoxContainer/KeyHbox"]
+custom_minimum_size = Vector2i(525, 0)
+offset_right = 525.0
+offset_bottom = 26.0
+text = "Seleccione Llave"
+horizontal_alignment = 1
+
+[node name="KeyOption" type="OptionButton" parent="SettingContainer/VBoxContainer/KeyHbox"]
+custom_minimum_size = Vector2i(140, 0)
+offset_left = 529.0
+offset_right = 669.0
+offset_bottom = 27.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("2_ecpkw")
+theme_override_styles/hover = ExtResource("3_3isx3")
+alignment = 1
+item_count = 2
+selected = 0
+popup/item_0/text = "Llave de Sol"
+popup/item_0/id = 0
+popup/item_1/text = "Llave de Fa"
+popup/item_1/id = 1
+
+[node name="SignatureHbox" type="HBoxContainer" parent="SettingContainer/VBoxContainer"]
+offset_top = 100.0
+offset_right = 800.0
+offset_bottom = 127.0
+
+[node name="Label" type="Label" parent="SettingContainer/VBoxContainer/SignatureHbox"]
+custom_minimum_size = Vector2i(525, 0)
+offset_right = 525.0
+offset_bottom = 26.0
+text = "Seleccione Armadura"
+horizontal_alignment = 1
+
+[node name="SignatureOption" type="OptionButton" parent="SettingContainer/VBoxContainer/SignatureHbox"]
+offset_left = 529.0
+offset_right = 652.0
+offset_bottom = 27.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("2_ecpkw")
+theme_override_styles/hover = ExtResource("3_3isx3")
+alignment = 1
+item_count = 15
+selected = 0
+popup/item_0/text = "Do / Lam"
+popup/item_0/id = 0
+popup/item_1/text = "SolM / Mim"
+popup/item_1/id = 1
+popup/item_2/text = "ReM / Sim"
+popup/item_2/id = 2
+popup/item_3/text = "LaM / Fa#m"
+popup/item_3/id = 3
+popup/item_4/text = "MiM / Do#m"
+popup/item_4/id = 4
+popup/item_5/text = "SiM / Sol#m"
+popup/item_5/id = 5
+popup/item_6/text = "Fa#M / Re#m"
+popup/item_6/id = 6
+popup/item_7/text = "Do#M / La#m"
+popup/item_7/id = 7
+popup/item_8/text = "FaM / Rem"
+popup/item_8/id = 8
+popup/item_9/text = "SibM / Solm"
+popup/item_9/id = 9
+popup/item_10/text = "MibM / Dom"
+popup/item_10/id = 10
+popup/item_11/text = "LabM / Fam"
+popup/item_11/id = 11
+popup/item_12/text = "RebM / Sibm"
+popup/item_12/id = 12
+popup/item_13/text = "SolbM / Sibm"
+popup/item_13/id = 13
+popup/item_14/text = "DobM / Labm"
+popup/item_14/id = 14
+
+[node name="MeasureHbox" type="HBoxContainer" parent="SettingContainer/VBoxContainer"]
+offset_top = 137.0
+offset_right = 800.0
+offset_bottom = 164.0
+
+[node name="Label" type="Label" parent="SettingContainer/VBoxContainer/MeasureHbox"]
+custom_minimum_size = Vector2i(525, 0)
+offset_right = 525.0
+offset_bottom = 26.0
+text = "Seleccione Compás"
+horizontal_alignment = 1
+
+[node name="TimeFOption" type="OptionButton" parent="SettingContainer/VBoxContainer/MeasureHbox"]
+custom_minimum_size = Vector2i(40, 0)
+offset_left = 529.0
+offset_right = 569.0
+offset_bottom = 27.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("2_ecpkw")
+theme_override_styles/hover = ExtResource("3_3isx3")
+alignment = 1
+item_count = 9
+selected = 3
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "3"
+popup/item_2/id = 2
+popup/item_3/text = "4"
+popup/item_3/id = 3
+popup/item_4/text = "5"
+popup/item_4/id = 4
+popup/item_5/text = "6"
+popup/item_5/id = 5
+popup/item_6/text = "7"
+popup/item_6/id = 6
+popup/item_7/text = "8"
+popup/item_7/id = 7
+popup/item_8/text = "9"
+popup/item_8/id = 8
+
+[node name="Label2" type="Label" parent="SettingContainer/VBoxContainer/MeasureHbox"]
+offset_left = 573.0
+offset_right = 580.0
+offset_bottom = 26.0
+text = "/"
+
+[node name="TimeSOption" type="OptionButton" parent="SettingContainer/VBoxContainer/MeasureHbox"]
+custom_minimum_size = Vector2i(40, 0)
+offset_left = 584.0
+offset_right = 624.0
+offset_bottom = 27.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("2_ecpkw")
+theme_override_styles/hover = ExtResource("3_3isx3")
+alignment = 1
+item_count = 4
+selected = 2
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "4"
+popup/item_2/id = 2
+popup/item_3/text = "8"
+popup/item_3/id = 3
+
+[node name="TempoHbox" type="HBoxContainer" parent="SettingContainer/VBoxContainer"]
+offset_top = 174.0
+offset_right = 800.0
+offset_bottom = 200.0
+
+[node name="Label" type="Label" parent="SettingContainer/VBoxContainer/TempoHbox"]
+custom_minimum_size = Vector2i(525, 0)
+offset_right = 525.0
+offset_bottom = 26.0
+text = "Seleccione Tempo (cambia el valor y presiona enter)
+"
+horizontal_alignment = 1
+
+[node name="TempoSpin" type="SpinBox" parent="SettingContainer/VBoxContainer/TempoHbox"]
+custom_minimum_size = Vector2i(80, 0)
+offset_left = 529.0
+offset_right = 609.0
+offset_bottom = 26.0
+theme = ExtResource("4_k3kcu")
+min_value = 60.0
+max_value = 240.0
+value = 60.0
+rounded = true
+alignment = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="SettingContainer/VBoxContainer"]
+offset_top = 210.0
+offset_right = 800.0
+offset_bottom = 380.0
+
+[node name="ColorRect" type="ColorRect" parent="SettingContainer/VBoxContainer/CenterContainer2"]
+custom_minimum_size = Vector2i(260, 160)
+offset_left = 270.0
+offset_top = 5.0
+offset_right = 530.0
+offset_bottom = 165.0
+
+[node name="PreMeasure" parent="SettingContainer/VBoxContainer/CenterContainer2" instance=ExtResource("7_g2ury")]
+anchors_preset = 0
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = 280.0
+offset_top = 0.0
+offset_right = 520.0
+offset_bottom = 170.0
+grow_vertical = 1
+
+[node name="HSeparator2" type="HSeparator" parent="SettingContainer/VBoxContainer"]
+offset_top = 390.0
+offset_right = 800.0
+offset_bottom = 394.0
+
+[node name="CenterContainer" type="CenterContainer" parent="SettingContainer/VBoxContainer"]
+custom_minimum_size = Vector2i(0, 80)
+offset_top = 404.0
+offset_right = 800.0
+offset_bottom = 484.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingContainer/VBoxContainer/CenterContainer"]
+offset_left = 170.0
+offset_top = 28.0
+offset_right = 630.0
+offset_bottom = 51.0
+theme_override_constants/separation = 60
+
+[node name="Cancel" type="Button" parent="SettingContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(200, 0)
+offset_right = 200.0
+offset_bottom = 23.0
+theme_override_styles/normal = ExtResource("4_00qm8")
+theme_override_styles/hover = ExtResource("5_5ogkc")
+text = "Cancelar"
+
+[node name="SaveSettings" type="Button" parent="SettingContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2i(200, 0)
+offset_left = 260.0
+offset_right = 460.0
+offset_bottom = 23.0
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_styles/normal = ExtResource("4_e1loh")
+theme_override_styles/hover = ExtResource("5_71c6l")
+theme_override_styles/focus = ExtResource("6_740oo")
+text = "Generar Partitura"
+icon_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Manager/HBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="toggled" from="VBoxContainer/Manager/HBoxContainer/Play" to="." method="_on_play_toggled"]
+[connection signal="item_selected" from="SettingContainer/VBoxContainer/KeyHbox/KeyOption" to="." method="_on_key_option_item_selected"]
+[connection signal="item_selected" from="SettingContainer/VBoxContainer/SignatureHbox/SignatureOption" to="." method="_on_signature_option_item_selected"]
+[connection signal="item_selected" from="SettingContainer/VBoxContainer/MeasureHbox/TimeFOption" to="." method="_on_time_f_option_item_selected"]
+[connection signal="item_selected" from="SettingContainer/VBoxContainer/MeasureHbox/TimeSOption" to="." method="_on_time_s_option_item_selected"]
+[connection signal="value_changed" from="SettingContainer/VBoxContainer/TempoHbox/TempoSpin" to="." method="_on_tempo_spin_value_changed"]
+[connection signal="pressed" from="SettingContainer/VBoxContainer/CenterContainer/HBoxContainer/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="SettingContainer/VBoxContainer/CenterContainer/HBoxContainer/SaveSettings" to="." method="_on_save_settings_pressed"]

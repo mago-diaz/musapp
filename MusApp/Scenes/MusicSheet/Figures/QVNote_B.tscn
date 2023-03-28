@@ -1,0 +1,158 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxalnk7pc0crc"]
+
+[ext_resource type="Script" path="res://Scenes/MusicSheet/Figures/FigureNote.gd" id="1_3bfxb"]
+[ext_resource type="Texture2D" uid="uid://db4swaem2q3yc" path="res://Assets/Figures/EighthNote.png" id="1_t3hve"]
+[ext_resource type="Texture2D" uid="uid://42t1b1a81l8" path="res://Assets/Figures/numsign.png" id="3_w0jrd"]
+[ext_resource type="Texture2D" uid="uid://dh3b4u8s0wbsn" path="res://Assets/Figures/bemol.png" id="4_li2r7"]
+[ext_resource type="Texture2D" uid="uid://bfw2nnphbtgdl" path="res://Assets/Figures/becuadro.png" id="5_k0x8v"]
+
+[node name="QVNote" type="Control"]
+custom_minimum_size = Vector2i(26, 14)
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -9.0
+offset_right = 26.0
+offset_bottom = 5.0
+grow_vertical = 2
+script = ExtResource("1_3bfxb")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2i(20, 10)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_top = -55.0
+offset_right = 28.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_layout_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+custom_minimum_size = Vector2i(54, 54)
+layout_mode = 2
+offset_right = 54.0
+offset_bottom = 54.0
+texture = ExtResource("1_t3hve")
+ignore_texture_size = true
+
+[node name="L1" type="CenterContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2i(22, 2)
+layout_mode = 0
+offset_left = -3.0
+offset_top = 4.0
+offset_right = 19.0
+offset_bottom = 6.0
+metadata/_edit_layout_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="L1"]
+custom_minimum_size = Vector2i(22, 2)
+layout_mode = 2
+offset_right = 22.0
+offset_bottom = 2.0
+color = Color(0, 0, 0, 1)
+
+[node name="L2" type="CenterContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2i(22, 2)
+layout_mode = 0
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 19.0
+offset_bottom = -2.0
+metadata/_edit_layout_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="L2"]
+custom_minimum_size = Vector2i(22, 2)
+layout_mode = 2
+offset_right = 22.0
+offset_bottom = 2.0
+color = Color(0, 0, 0, 1)
+
+[node name="L3" type="CenterContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2i(22, 2)
+layout_mode = 0
+offset_left = -3.0
+offset_top = -12.0
+offset_right = 19.0
+offset_bottom = -10.0
+metadata/_edit_layout_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="L3"]
+custom_minimum_size = Vector2i(22, 2)
+layout_mode = 2
+offset_right = 22.0
+offset_bottom = 2.0
+color = Color(0, 0, 0, 1)
+
+[node name="L4" type="CenterContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2i(22, 2)
+layout_mode = 0
+offset_left = -3.0
+offset_top = -20.0
+offset_right = 19.0
+offset_bottom = -18.0
+metadata/_edit_layout_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="L4"]
+custom_minimum_size = Vector2i(22, 2)
+layout_mode = 2
+offset_right = 22.0
+offset_bottom = 2.0
+color = Color(0, 0, 0, 1)
+
+[node name="L5" type="CenterContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2i(22, 2)
+layout_mode = 0
+offset_left = -3.0
+offset_top = -28.0
+offset_right = 19.0
+offset_bottom = -26.0
+metadata/_edit_layout_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="L5"]
+custom_minimum_size = Vector2i(22, 2)
+layout_mode = 2
+offset_right = 22.0
+offset_bottom = 2.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sharp" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+offset_left = -19.0
+offset_top = -8.0
+offset_right = 7.0
+offset_bottom = 17.0
+texture = ExtResource("3_w0jrd")
+ignore_texture_size = true
+
+[node name="Flat" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+offset_left = -19.0
+offset_top = -8.0
+offset_right = 7.0
+offset_bottom = 17.0
+texture = ExtResource("4_li2r7")
+ignore_texture_size = true
+
+[node name="Natural" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+offset_left = -19.0
+offset_top = -6.0
+offset_right = 7.0
+offset_bottom = 19.0
+texture = ExtResource("5_k0x8v")
+ignore_texture_size = true

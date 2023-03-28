@@ -1,0 +1,96 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw2580772naoq"]
+
+[ext_resource type="Theme" uid="uid://pxrnkdb26ege" path="res://Assets/ButtonColor/Default.tres" id="1_vr3jq"]
+
+[node name="BaseQuestion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_left = 177
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 177
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+offset_left = 177.0
+offset_top = 100.0
+offset_right = 1743.0
+offset_bottom = 980.0
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+offset_right = 1566.0
+offset_bottom = 45.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+offset_right = 781.0
+offset_bottom = 45.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Pregunta Estándar"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 785.0
+offset_right = 1566.0
+offset_bottom = 45.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Control"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -254.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_layout_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Control/HBoxContainer"]
+offset_top = 4.0
+offset_right = 183.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Puntaje asignado : "
+horizontal_alignment = 2
+metadata/_edit_layout_mode = 1
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/HBoxContainer/Control/HBoxContainer"]
+offset_left = 187.0
+offset_right = 263.0
+offset_bottom = 40.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_vr3jq")
+alignment = 1
+metadata/_edit_layout_mode = 1
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2i(0, 200)
+offset_top = 55.0
+offset_right = 1566.0
+offset_bottom = 255.0
+theme = ExtResource("1_vr3jq")
+theme_override_font_sizes/font_size = 20
+placeholder_text = "Escribir su pregunta aqui ..."

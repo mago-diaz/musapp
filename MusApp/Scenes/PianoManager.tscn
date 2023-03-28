@@ -1,0 +1,288 @@
+[gd_scene load_steps=9 format=3 uid="uid://b65scaeb0wqtf"]
+
+[ext_resource type="PackedScene" uid="uid://b4cj1xbkfayad" path="res://Scenes/Piano/Piano.tscn" id="1_43ke8"]
+[ext_resource type="Script" path="res://Scenes/PianoManager.gd" id="1_rs2kb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mtx0"]
+bg_color = Color(0.521569, 0, 0.0117647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ix1g1"]
+bg_color = Color(0.768627, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m11fg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rn7hq"]
+bg_color = Color(0, 0.498039, 0.501961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkmot"]
+bg_color = Color(0, 0.639216, 0.729412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o70s6"]
+
+[node name="PianoManager" type="Control"]
+custom_minimum_size = Vector2i(1460, 460)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = -330.0
+offset_right = 710.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rs2kb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(1457, 360)
+offset_right = 860.0
+offset_bottom = 240.0
+color = Color(0.0784314, 0.211765, 0.286275, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2i(0, 200)
+offset_right = 851.0
+offset_bottom = 207.0
+theme_override_constants/separation = 10
+
+[node name="Piano" parent="HBoxContainer" instance=ExtResource("1_43ke8")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 840.0
+offset_bottom = 460.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Grabacion" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2i(600, 200)
+offset_left = 850.0
+offset_right = 1451.0
+offset_bottom = 460.0
+theme_override_constants/separation = 20
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/Grabacion"]
+custom_minimum_size = Vector2i(0, 40)
+offset_right = 601.0
+offset_bottom = 40.0
+
+[node name="GrabacionTitle" type="Label" parent="HBoxContainer/Grabacion/CenterContainer"]
+offset_left = 260.0
+offset_top = 7.0
+offset_right = 340.0
+offset_bottom = 33.0
+theme_override_font_sizes/font_size = 16
+text = "Grabación"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/Grabacion"]
+offset_top = 60.0
+offset_right = 601.0
+offset_bottom = 64.0
+
+[node name="NoteHbox" type="HBoxContainer" parent="HBoxContainer/Grabacion"]
+custom_minimum_size = Vector2i(0, 30)
+offset_top = 84.0
+offset_right = 601.0
+offset_bottom = 115.0
+
+[node name="Label" type="Label" parent="HBoxContainer/Grabacion/NoteHbox"]
+custom_minimum_size = Vector2i(530, 0)
+offset_top = 2.0
+offset_right = 530.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 16
+text = "Seleccione nota inicial
+"
+
+[node name="Note" type="OptionButton" parent="HBoxContainer/Grabacion/NoteHbox"]
+offset_left = 534.0
+offset_right = 601.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+tooltip_text = "Cambia la nota inicial del piano"
+theme_override_font_sizes/font_size = 16
+item_count = 7
+selected = 0
+popup/item_0/text = "Do"
+popup/item_0/id = 0
+popup/item_1/text = "Re"
+popup/item_1/id = 1
+popup/item_2/text = "Mi"
+popup/item_2/id = 2
+popup/item_3/text = "Fa"
+popup/item_3/id = 3
+popup/item_4/text = "Sol"
+popup/item_4/id = 4
+popup/item_5/text = "La"
+popup/item_5/id = 5
+popup/item_6/text = "Si"
+popup/item_6/id = 6
+
+[node name="PitchHbox" type="HBoxContainer" parent="HBoxContainer/Grabacion"]
+custom_minimum_size = Vector2i(0, 30)
+offset_top = 135.0
+offset_right = 601.0
+offset_bottom = 166.0
+
+[node name="Label" type="Label" parent="HBoxContainer/Grabacion/PitchHbox"]
+custom_minimum_size = Vector2i(530, 0)
+offset_top = 2.0
+offset_right = 530.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 16
+text = "Seleccione octava inicial"
+
+[node name="Pitch" type="OptionButton" parent="HBoxContainer/Grabacion/PitchHbox"]
+custom_minimum_size = Vector2i(67, 0)
+offset_left = 534.0
+offset_right = 601.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+tooltip_text = "Cambia el índice de la escala del piano"
+item_count = 5
+selected = 2
+popup/item_0/text = "2"
+popup/item_0/id = 0
+popup/item_1/text = "3"
+popup/item_1/id = 1
+popup/item_2/text = "4"
+popup/item_2/id = 2
+popup/item_3/text = "5"
+popup/item_3/id = 3
+popup/item_4/text = "6"
+popup/item_4/id = 4
+metadata/_edit_layout_mode = 1
+
+[node name="InstrumentHbox" type="HBoxContainer" parent="HBoxContainer/Grabacion"]
+custom_minimum_size = Vector2i(0, 30)
+offset_top = 186.0
+offset_right = 601.0
+offset_bottom = 217.0
+
+[node name="Label" type="Label" parent="HBoxContainer/Grabacion/InstrumentHbox"]
+custom_minimum_size = Vector2i(455, 0)
+offset_top = 2.0
+offset_right = 455.0
+offset_bottom = 28.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 16
+text = "Seleccione sonido del instrumento"
+
+[node name="Instrument" type="OptionButton" parent="HBoxContainer/Grabacion/InstrumentHbox"]
+offset_left = 459.0
+offset_right = 599.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+tooltip_text = "Cambia el instrumento que reproducirá la nota"
+theme_override_font_sizes/font_size = 16
+item_count = 12
+selected = 6
+popup/item_0/text = "Instrumento"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Acordeon"
+popup/item_1/id = 1
+popup/item_2/text = "Clarinete"
+popup/item_2/id = 2
+popup/item_3/text = "ContraBajo"
+popup/item_3/id = 3
+popup/item_4/text = "Fagot"
+popup/item_4/id = 4
+popup/item_5/text = "Flauta"
+popup/item_5/id = 5
+popup/item_6/text = "Piano"
+popup/item_6/id = 6
+popup/item_7/text = "Saxofón"
+popup/item_7/id = 7
+popup/item_8/text = "Trombon"
+popup/item_8/id = 8
+popup/item_9/text = "Trompeta"
+popup/item_9/id = 9
+popup/item_10/text = "Violín"
+popup/item_10/id = 10
+popup/item_11/text = "ViolinCello"
+popup/item_11/id = 11
+
+[node name="RecorderHbox" type="HBoxContainer" parent="HBoxContainer/Grabacion"]
+custom_minimum_size = Vector2i(0, 30)
+offset_top = 237.0
+offset_right = 601.0
+offset_bottom = 267.0
+
+[node name="Record" type="Button" parent="HBoxContainer/Grabacion/RecorderHbox"]
+offset_right = 601.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+tooltip_text = "Comienza a grabar lo que toques en el piano"
+theme_override_styles/normal = SubResource("StyleBoxFlat_0mtx0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ix1g1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_m11fg")
+toggle_mode = true
+text = "Responder (Grabar)"
+icon_alignment = 1
+metadata/_edit_layout_mode = 1
+
+[node name="Timer" type="Timer" parent="HBoxContainer/Grabacion/RecorderHbox"]
+
+[node name="PlayHbox" type="HBoxContainer" parent="HBoxContainer/Grabacion"]
+visible = false
+custom_minimum_size = Vector2i(0, 30)
+offset_top = 287.0
+offset_right = 601.0
+offset_bottom = 317.0
+
+[node name="Label" type="Label" parent="HBoxContainer/Grabacion/PlayHbox"]
+custom_minimum_size = Vector2i(210, 0)
+offset_top = 2.0
+offset_right = 210.0
+offset_bottom = 28.0
+text = "Respuesta de la Pregunta"
+
+[node name="Play" type="Button" parent="HBoxContainer/Grabacion/PlayHbox"]
+offset_left = 214.0
+offset_right = 601.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+tooltip_text = "Reproduce la ultima grabación"
+theme_override_styles/normal = SubResource("StyleBoxFlat_rn7hq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qkmot")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_o70s6")
+toggle_mode = true
+text = "Reproducir"
+metadata/_edit_layout_mode = 1
+
+[node name="Timer" type="Timer" parent="HBoxContainer/Grabacion/PlayHbox"]
+
+[connection signal="record_stopped" from="HBoxContainer/Piano" to="." method="_on_piano_record_stopped"]
+[connection signal="set_piano" from="HBoxContainer/Piano" to="." method="_set_to_play_song"]
+[connection signal="song_playing" from="HBoxContainer/Piano" to="." method="_on_piano_song_playing"]
+[connection signal="song_stopped" from="HBoxContainer/Piano" to="." method="_on_piano_song_stopped"]
+[connection signal="button_down" from="HBoxContainer/Grabacion/NoteHbox/Note" to="." method="_on_button_down"]
+[connection signal="item_selected" from="HBoxContainer/Grabacion/NoteHbox/Note" to="." method="_change_note"]
+[connection signal="button_down" from="HBoxContainer/Grabacion/PitchHbox/Pitch" to="." method="_on_button_down"]
+[connection signal="item_selected" from="HBoxContainer/Grabacion/PitchHbox/Pitch" to="." method="_change_pitch"]
+[connection signal="button_down" from="HBoxContainer/Grabacion/InstrumentHbox/Instrument" to="." method="_on_button_down"]
+[connection signal="item_selected" from="HBoxContainer/Grabacion/InstrumentHbox/Instrument" to="." method="_change_instrument"]
+[connection signal="toggled" from="HBoxContainer/Grabacion/RecorderHbox/Record" to="." method="_on_record_toggled"]
+[connection signal="timeout" from="HBoxContainer/Grabacion/RecorderHbox/Timer" to="." method="_on_timer_timeout"]
+[connection signal="toggled" from="HBoxContainer/Grabacion/PlayHbox/Play" to="." method="_on_play_toggled"]
+[connection signal="timeout" from="HBoxContainer/Grabacion/PlayHbox/Timer" to="." method="_on_timer_timeout_play"]

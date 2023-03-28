@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds3q5rr7hrnmc"]
+
+[ext_resource type="Script" path="res://Home/SchoolManager/EditSceens/CreateGradeOption.gd" id="1_hnqll"]
+
+[node name="CreateGradeOption" type="CenterContainer"]
+custom_minimum_size = Vector2i(780, 60)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_bottom = 60.0
+grow_horizontal = 2
+script = ExtResource("1_hnqll")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(780, 40)
+offset_left = 1.0
+offset_top = 10.0
+offset_right = 781.0
+offset_bottom = 50.0
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2i(780, 20)
+offset_top = 10.0
+offset_right = 783.0
+offset_bottom = 50.0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(5, 40)
+offset_right = 5.0
+offset_bottom = 40.0
+color = Color(0.572549, 0.619608, 1, 1)
+
+[node name="VBoxContainer" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(570, 0)
+offset_left = 9.0
+offset_right = 579.0
+offset_bottom = 40.0
+
+[node name="GradeBox" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2i(540, 40)
+offset_left = 15.0
+offset_right = 555.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Grade" type="Label" parent="VBoxContainer/VBoxContainer/GradeBox"]
+offset_top = 7.0
+offset_right = 45.0
+offset_bottom = 33.0
+text = "Letra:"
+
+[node name="GradeLabel" type="Label" parent="VBoxContainer/VBoxContainer/GradeBox"]
+custom_minimum_size = Vector2i(200, 0)
+offset_left = 65.0
+offset_top = 7.0
+offset_right = 265.0
+offset_bottom = 33.0
+text = "INSERTE LETRA"
+clip_text = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(200, 40)
+offset_left = 583.0
+offset_right = 783.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer"]
+offset_left = 100.0
+offset_top = 20.0
+offset_right = 100.0
+offset_bottom = 20.0
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer/HBoxContainer"]
+visible = false
+offset_right = 66.0
+offset_bottom = 26.0
+text = "(Creado)"

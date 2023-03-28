@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cebdv8dfer7dn"]
+
+[ext_resource type="Texture2D" uid="uid://bw47ld872jdfn" path="res://Assets/Figures/SixteenthSilence.png" id="1_6m5uf"]
+
+[node name="SQSilence" type="Control"]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2i(60, 60)
+layout_mode = 0
+offset_left = -20.0
+offset_top = -15.0
+offset_right = 40.0
+offset_bottom = 45.0
+texture = ExtResource("1_6m5uf")
+ignore_texture_size = true

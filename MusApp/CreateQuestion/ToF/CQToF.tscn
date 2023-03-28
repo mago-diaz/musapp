@@ -1,0 +1,161 @@
+[gd_scene load_steps=8 format=3 uid="uid://1wmy6a1yek5v"]
+
+[ext_resource type="Script" path="res://CreateQuestion/ToF/CQToF.gd" id="1_7glmc"]
+[ext_resource type="StyleBox" uid="uid://bw8ypx0hhphn8" path="res://Assets/ButtonColor/GreenColorFocus.tres" id="2_6e3kl"]
+[ext_resource type="StyleBox" uid="uid://cxt3p1cqhcx1g" path="res://Assets/ButtonColor/RedButtonNormal.tres" id="2_wli8e"]
+[ext_resource type="StyleBox" uid="uid://b1vp12avcsa6q" path="res://Assets/ButtonColor/RedButtonHover.tres" id="3_fh38b"]
+[ext_resource type="Texture2D" uid="uid://cp10qyeg3hy26" path="res://Assets/iconos/borrar2.png" id="5_8kbix"]
+[ext_resource type="StyleBox" uid="uid://bt60dr6ro1cwu" path="res://Assets/ButtonColor/BlueButtonHover.tres" id="6_apntx"]
+[ext_resource type="StyleBox" uid="uid://b5l8bij5x63n3" path="res://Assets/ButtonColor/BlueButtonNormal.tres" id="6_cbj4i"]
+
+[node name="CQToF" type="CenterContainer"]
+custom_minimum_size = Vector2i(1500, 240)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -650.0
+offset_top = -188.0
+offset_right = 650.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7glmc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(1400, 220)
+offset_left = 50.0
+offset_top = 10.0
+offset_right = 1450.0
+offset_bottom = 230.0
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 60.0
+offset_top = 31.0
+offset_right = 1440.0
+offset_bottom = 209.0
+
+[node name="Title" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1380, 0)
+offset_right = 1380.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer/Title"]
+custom_minimum_size = Vector2i(983, 0)
+offset_top = 7.0
+offset_right = 983.0
+offset_bottom = 33.0
+text = "Pregunta #:  --"
+
+[node name="Control" type="Control" parent="VBoxContainer/Title"]
+custom_minimum_size = Vector2i(270, 40)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1003.0
+offset_right = 1273.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Title/Control"]
+custom_minimum_size = Vector2i(270, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0.627451, 0.45098, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Title/Control"]
+custom_minimum_size = Vector2i(270, 40)
+offset_right = 270.0
+offset_bottom = 32.0
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/Title/Control/HBoxContainer"]
+custom_minimum_size = Vector2i(160, 0)
+offset_top = 7.0
+offset_right = 160.0
+offset_bottom = 33.0
+text = "Puntaje Pregunta"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Title/Control/HBoxContainer"]
+custom_minimum_size = Vector2i(20, 0)
+offset_left = 178.0
+offset_top = 4.0
+offset_right = 261.063
+offset_bottom = 35.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+rounded = true
+update_on_text_changed = true
+
+[node name="Delete" type="Button" parent="VBoxContainer/Title"]
+custom_minimum_size = Vector2i(80, 32)
+offset_left = 1293.0
+offset_right = 1373.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("2_wli8e")
+theme_override_styles/hover = ExtResource("3_fh38b")
+theme_override_styles/focus = ExtResource("2_6e3kl")
+icon = ExtResource("5_8kbix")
+icon_alignment = 1
+
+[node name="QuestionBox" type="CenterContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1380, 80)
+offset_top = 44.0
+offset_right = 1380.0
+offset_bottom = 134.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/QuestionBox"]
+custom_minimum_size = Vector2i(1168, 90)
+offset_left = 106.0
+offset_right = 1274.0
+offset_bottom = 90.0
+theme_override_styles/normal = ExtResource("6_cbj4i")
+placeholder_text = "Escribe aqui la pregunta ..."
+wrap_mode = 1
+minimap_width = 200
+
+[node name="Answer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2i(1175, 0)
+offset_left = 102.0
+offset_top = 138.0
+offset_right = 1277.0
+offset_bottom = 178.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/Answer"]
+custom_minimum_size = Vector2i(470, 0)
+offset_top = 7.0
+offset_right = 470.0
+offset_bottom = 33.0
+text = "La respuesta correcta que se espera del alumno es: "
+
+[node name="ToFOptions" type="OptionButton" parent="VBoxContainer/Answer"]
+custom_minimum_size = Vector2i(270, 40)
+offset_left = 474.0
+offset_right = 744.0
+offset_bottom = 40.0
+theme_override_styles/normal = ExtResource("6_cbj4i")
+theme_override_styles/hover = ExtResource("6_apntx")
+alignment = 1
+item_count = 3
+selected = 0
+popup/item_0/text = "Selecciona la opcion correcta"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Verdadero"
+popup/item_1/id = 1
+popup/item_2/text = "Falso"
+popup/item_2/id = 2
+
+[connection signal="value_changed" from="VBoxContainer/Title/Control/HBoxContainer/SpinBox" to="." method="_on_spin_box_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Title/Delete" to="." method="_on_delete_pressed"]
+[connection signal="item_selected" from="VBoxContainer/Answer/ToFOptions" to="." method="_on_tof_options_item_selected"]

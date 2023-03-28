@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq105hg42k1l0"]
+
+[ext_resource type="Script" path="res://TypeOfQuestion/Selection/SelectionQuestion.gd" id="1_11rig"]
+
+[node name="Selection" type="Control"]
+custom_minimum_size = Vector2i(1518, 620)
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -700.0
+offset_right = 700.0
+offset_bottom = 620.0
+grow_horizontal = 2
+script = ExtResource("1_11rig")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2i(5, 580)
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -254.0
+offset_right = 5.0
+offset_bottom = 326.0
+grow_vertical = 2
+scale = Vector2(1, 1.02053)
+color = Color(0.101961, 0.568627, 0.886275, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2i(1500, 510)
+offset_right = 1400.0
+offset_bottom = 620.0
+
+[node name="Container" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2i(1440, 0)
+offset_left = 30.0
+offset_top = 55.0
+offset_right = 1470.0
+offset_bottom = 565.0
+
+[node name="Label" type="Label" parent="CenterContainer/Container"]
+custom_minimum_size = Vector2i(0, 26)
+offset_right = 1440.0
+offset_bottom = 26.0
+text = "Selecciona una de la siguientes alternativas: "
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/Container"]
+custom_minimum_size = Vector2i(1440, 0)
+offset_top = 30.0
+offset_right = 1440.0
+offset_bottom = 510.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Container/CenterContainer"]
+custom_minimum_size = Vector2i(1400, 480)
+offset_left = 20.0
+offset_right = 1420.0
+offset_bottom = 480.0
+theme_override_constants/separation = 32
